@@ -13,23 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 
+from .views import Register, Login, logout ,UserCenterInfo
 
-from django.views.generic import View
-from django.shortcuts import render
-
-class Index(View):
-    def get(self, request):
-        is_login = request.session.get('is_login', None)
-        print(request.session.get('is_login', None))
-        print(request.session.get('user_sno', None))
-        return render(request, 'index.html', {'is_login': is_login})
-
+app_name = 'user'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', Index.as_view(), name='index'),
-    path('user/', include('apps.df_user.urls' ,namespace='user')),
+    path('register/', Register.as_view(), name='register'),
+    path('login/', Login.as_view(), name='login'),
+    path('logout/', logout, name='logout'),
+
+    path('user_center_info/', UserCenterInfo.as_view(), name='user_center_info'),
+
+
 ]
