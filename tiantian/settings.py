@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # apps
     'apps.df_user',
+    'apps.df_goods',
+    # 富文本编辑器
+    'tinymce'
 ]
 
 MIDDLEWARE = [
@@ -131,3 +134,10 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# 设置session过期时间为30分钟
+SESSION_COOKIE_AGE = 60*30
+# 当浏览器被关闭的时候将session失效，但是不能删除数据库的session数据
+# SESSION_EXPIRE_AT_BROWSER_CLOSE =  True
+# 每次请求都要保存一下session
+SESSION_SAVE_EVERY_REQUEST = True

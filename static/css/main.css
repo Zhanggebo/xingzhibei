@@ -95,7 +95,7 @@ html,body{height:100%}
 .subnav li a{display:block;height:44px;line-height:44px;text-indent:71px;font-size:14px;color:#333}
 .subnav li a:hover{color:#ff8800}
 
-.subnav li .fruit{background:url(../images/icons.png) 28px 0px no-repeat;}
+.subnav li .fruit{background:url(../images/icons.png) 28px 0 no-repeat;}
 .subnav li .seafood{background:url(../images/icons.png) 28px -43px no-repeat;}
 .subnav li .meet{background:url(../images/icons.png) 28px -86px no-repeat;}
 .subnav li .egg{background:url(../images/icons.png) 28px -132px no-repeat;}
@@ -542,7 +542,7 @@ html,body{height:100%}
 	background-color:#f9f9f9;
 	margin:10px 0 15px;
 	padding:10px 0;
-	height:90px;
+	height:100%;
 }
 
 .user_info_list li{

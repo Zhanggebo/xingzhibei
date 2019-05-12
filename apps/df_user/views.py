@@ -111,7 +111,24 @@ def logout(request):
 # 用户
 class UserCenterInfo(View):
     def get(self, request):
-        print(request.user.id)
-        return render(request, 'df_user/user_center_info.html')
+        print(request.session.get('user_sno'))
+        user_sno = request.session.get('user_sno')
+        user = UserProfile.objects.filter(user_sno=user_sno)
+        print(user)
+
+        user_colege = user[0].user_college
+        user_sno = user[0].user_sno
+        user_name = user[0].user_name
+        user_mobile = user[0].user_mobile
+        user_address = user[0].user_address
+
+        context = {
+            'user_colege': user_colege,
+            'user_sno': user_sno,
+            'user_name': user_name,
+            'user_mobile': user_mobile,
+            'user_address': user_address,
+        }
+        return render(request, 'df_user/user_center_info.html', context)
 
 
