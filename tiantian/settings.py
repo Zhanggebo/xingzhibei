@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # apps
     'apps.df_user',
     'apps.df_goods',
+    'apps.df_advertising',
     # 富文本编辑器
     'tinymce'
 ]

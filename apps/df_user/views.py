@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate, login
 
 from .models import UserProfile
 
+from . import user_decorator
 
 from hashlib import sha1
 
@@ -63,7 +64,6 @@ class Register(View):
         })
         # return redirect('/user/login/')
 
-
 # 登录
 class Login(View):
 
@@ -95,7 +95,7 @@ class Login(View):
         request.session['user_sno'] = user_sno
         return redirect('/')
 
-
+# 登出
 def logout(request):
     if not request.session.get('is_login', None):
         # 如果本来就未登录，也就没有登出一说
@@ -109,7 +109,10 @@ def logout(request):
 
 
 # 用户
+
 class UserCenterInfo(View):
+
+    @user_decorator.login
     def get(self, request):
         print(request.session.get('user_sno'))
         user_sno = request.session.get('user_sno')

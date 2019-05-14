@@ -2,31 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a172d3e6-8753-422d-bbf5-a944ceee2f74" name="默认的" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_goods/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_goods/admin.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_goods/apps.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_goods/migrations/0001_initial.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_goods/migrations/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_goods/models.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_goods/tests.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_goods/views.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_user/migrations/0002_auto_20190511_2152.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_user/migrations/0003_auto_20190511_2159.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_user/migrations/0004_userprofile_user_address.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_advertising/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_advertising/admin.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_advertising/apps.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_advertising/migrations/0001_initial.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_advertising/migrations/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_advertising/models.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_advertising/tests.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_advertising/views.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/apps/df_user/admin.py" afterPath="$PROJECT_DIR$/apps/df_user/admin.py" />
+      <change beforePath="$PROJECT_DIR$/apps/df_user/__init__.py" afterPath="$PROJECT_DIR$/apps/df_user/__init__.py" />
       <change beforePath="$PROJECT_DIR$/apps/df_user/apps.py" afterPath="$PROJECT_DIR$/apps/df_user/apps.py" />
-      <change beforePath="$PROJECT_DIR$/apps/df_user/models.py" afterPath="$PROJECT_DIR$/apps/df_user/models.py" />
       <change beforePath="$PROJECT_DIR$/apps/df_user/views.py" afterPath="$PROJECT_DIR$/apps/df_user/views.py" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.css" afterPath="$PROJECT_DIR$/static/css/main.css" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change beforePath="$PROJECT_DIR$/templates/df_user/login.html" afterPath="$PROJECT_DIR$/templates/df_user/login.html" />
-      <change beforePath="$PROJECT_DIR$/templates/df_user/user_center_info.html" afterPath="$PROJECT_DIR$/templates/df_user/user_center_info.html" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
       <change beforePath="$PROJECT_DIR$/tiantian/settings.py" afterPath="$PROJECT_DIR$/tiantian/settings.py" />
-      <change beforePath="$PROJECT_DIR$/tiantian/urls.py" afterPath="$PROJECT_DIR$/tiantian/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,24 +30,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/df_user/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="13" column="96" lean-forward="false" selection-start-line="13" selection-start-column="96" selection-end-line="13" selection-end-column="96" />
+            <state relative-caret-position="154">
+              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#li#6;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#block#1;n#!!top" expanded="false" />
+                <element signature="e#0#57#0" expanded="true" />
+                <element signature="e#351#376#0" expanded="false" />
+                <element signature="e#410#1749#0" expanded="false" />
+                <element signature="e#442#489#0" expanded="false" />
+                <element signature="e#541#1749#0" expanded="false" />
+                <element signature="e#1780#2582#0" expanded="false" />
+                <element signature="e#2093#2239#0" expanded="false" />
+                <element signature="e#2614#2921#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="34" column="61" lean-forward="false" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
+            <state relative-caret-position="554">
+              <caret line="36" column="60" lean-forward="false" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_decorator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/df_user/user_decorator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -69,6 +75,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -97,21 +104,25 @@
         <option value="$PROJECT_DIR$/templates/df_user/register.html" />
         <option value="$PROJECT_DIR$/apps/df_user/urls.py" />
         <option value="$PROJECT_DIR$/apps/df_user/models.py" />
-        <option value="$PROJECT_DIR$/apps/df_user/views.py" />
         <option value="$PROJECT_DIR$/templates/df_user/user_center_info.html" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/tiantian/settings.py" />
         <option value="$PROJECT_DIR$/apps/df_goods/models.py" />
         <option value="$PROJECT_DIR$/apps/df_goods/admin.py" />
-        <option value="$PROJECT_DIR$/apps/df_user/apps.py" />
         <option value="$PROJECT_DIR$/apps/df_user/admin.py" />
         <option value="$PROJECT_DIR$/static/css/main.css" />
         <option value="$PROJECT_DIR$/apps/df_goods/views.py" />
         <option value="$PROJECT_DIR$/tiantian/urls.py" />
         <option value="$PROJECT_DIR$/apps/df_goods/urls.py" />
         <option value="$PROJECT_DIR$/templates/df_user/login.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/apps/df_user/apps.py" />
+        <option value="$PROJECT_DIR$/apps/df_user/__init__.py" />
+        <option value="$PROJECT_DIR$/apps/df_advertising/admin.py" />
+        <option value="$PROJECT_DIR$/tiantian/settings.py" />
+        <option value="$PROJECT_DIR$/apps/df_advertising/models.py" />
+        <option value="$PROJECT_DIR$/apps/df_user/views.py" />
+        <option value="$PROJECT_DIR$/apps/df_user/user_decorator.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
@@ -122,10 +133,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="98" />
-    <option name="y" value="128" />
-    <option name="width" value="1932" />
-    <option name="height" value="1055" />
+    <option name="x" value="2015" />
+    <option name="y" value="137" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="添加" />
@@ -145,8 +156,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,23 +179,6 @@
             <path>
               <item name="tiantian" type="b2602c69:ProjectViewProjectNode" />
               <item name="tiantian" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="df_user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tiantian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tiantian" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tiantian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tiantian" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tiantian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tiantian" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -199,7 +193,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../blog/YuKalix-Blog/YuKalix_Blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../platform/courseplatform" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -207,16 +201,16 @@
     <property name="ignore_missing_gitignore" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\apps" />
+      <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\templates" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\apps\df_goods" />
       <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\apps\df_user" />
       <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\templates" />
       <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\templates\df_user" />
       <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\static" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\apps" />
-      <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -273,21 +267,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
+    <frame x="1912" y="22" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26264802" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26264802" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26264802" sideWeight="0.4978678" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32831" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13646056" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.141258" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@tiantian" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32831" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@tiantian" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32831" sideWeight="0.4978678" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08848614" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -314,18 +308,80 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="96" lean-forward="false" selection-start-line="13" selection-start-column="96" selection-end-line="13" selection-end-column="96" />
+          <folding>
+            <element signature="n#block#1;n#!!top" expanded="false" />
+            <element signature="e#8503#8580#0#DjangoTemplate" expanded="false" />
+            <element signature="e#8838#8879#0#HTML" expanded="false" />
+            <element signature="e#8912#8963#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="34" column="61" lean-forward="false" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#block#1;n#!!top" expanded="false" />
+            <element signature="e#8503#8580#0#DjangoTemplate" expanded="false" />
+            <element signature="e#8838#8879#0#HTML" expanded="false" />
+            <element signature="e#8912#8963#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="34" column="61" lean-forward="false" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#block#1;n#!!top" expanded="false" />
+            <element signature="e#8503#8580#0#DjangoTemplate" expanded="false" />
+            <element signature="e#8838#8879#0#HTML" expanded="false" />
+            <element signature="e#8912#8963#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="34" column="61" lean-forward="false" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/df_user/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1269">
           <caret line="100" column="29" lean-forward="false" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
           <folding>
-            <element signature="e#0#57#0" expanded="false" />
-            <element signature="e#322#347#0" expanded="false" />
-            <element signature="e#381#1720#0" expanded="false" />
-            <element signature="e#413#460#0" expanded="false" />
-            <element signature="e#512#1720#0" expanded="false" />
-            <element signature="e#2065#2211#0" expanded="false" />
-            <element signature="e#2287#2410#0" expanded="false" />
+            <element signature="e#351#376#0" expanded="false" />
+            <element signature="e#410#1749#0" expanded="false" />
+            <element signature="e#442#489#0" expanded="false" />
+            <element signature="e#541#1749#0" expanded="false" />
+            <element signature="e#2093#2239#0" expanded="false" />
+            <element signature="e#2315#2438#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -334,8 +390,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3402">
           <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="132" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#307#316#0" expanded="false" />
+            <element signature="e#351#376#0" expanded="false" />
+            <element signature="e#410#1749#0" expanded="false" />
+            <element signature="e#442#489#0" expanded="false" />
+            <element signature="e#541#1749#0" expanded="false" />
+            <element signature="e#2093#2239#0" expanded="false" />
+            <element signature="e#2315#2438#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -345,13 +414,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#57#0" expanded="false" />
-            <element signature="e#322#347#0" expanded="false" />
-            <element signature="e#381#1720#0" expanded="false" />
-            <element signature="e#413#460#0" expanded="false" />
-            <element signature="e#512#1720#0" expanded="false" />
-            <element signature="e#2065#2211#0" expanded="false" />
-            <element signature="e#2287#2410#0" expanded="false" />
+            <element signature="e#351#376#0" expanded="false" />
+            <element signature="e#410#1749#0" expanded="false" />
+            <element signature="e#442#489#0" expanded="false" />
+            <element signature="e#541#1749#0" expanded="false" />
+            <element signature="e#2093#2239#0" expanded="false" />
+            <element signature="e#2315#2438#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -361,29 +429,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#57#0" expanded="false" />
-            <element signature="e#322#347#0" expanded="false" />
-            <element signature="e#381#1720#0" expanded="false" />
-            <element signature="e#413#460#0" expanded="false" />
-            <element signature="e#512#1720#0" expanded="false" />
-            <element signature="e#2065#2211#0" expanded="false" />
-            <element signature="e#2287#2410#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/df_user/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#57#0" expanded="false" />
-            <element signature="e#322#347#0" expanded="false" />
-            <element signature="e#381#1720#0" expanded="false" />
-            <element signature="e#413#460#0" expanded="false" />
-            <element signature="e#512#1720#0" expanded="false" />
-            <element signature="e#2065#2211#0" expanded="false" />
-            <element signature="e#2287#2410#0" expanded="false" />
+            <element signature="e#351#376#0" expanded="false" />
+            <element signature="e#410#1749#0" expanded="false" />
+            <element signature="e#442#489#0" expanded="false" />
+            <element signature="e#541#1749#0" expanded="false" />
+            <element signature="e#2093#2239#0" expanded="false" />
+            <element signature="e#2315#2438#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -437,13 +488,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/df_user/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_user/forms.py" />
     <entry file="file://G:/ENVS/tiantian_env/Lib/site-packages/django/shortcuts.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -481,7 +526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -489,7 +533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
           <caret line="22" column="65" lean-forward="false" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -498,37 +541,8 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-279">
             <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="7" />
-            <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tiantian/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="49" column="13" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/df_goods/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/df_goods/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -536,7 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -544,25 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/df_user/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/df_user/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -571,31 +565,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="97" column="49" lean-forward="false" selection-start-line="97" selection-start-column="49" selection-end-line="97" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tiantian/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding>
-            <element signature="e#632#664#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/df_goods/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
           <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding>
-            <element signature="e#632#660#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -604,30 +577,7 @@
         <state relative-caret-position="405">
           <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/df_user/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/df_user/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="70" column="44" lean-forward="true" selection-start-line="70" selection-start-column="44" selection-end-line="70" selection-end-column="44" />
-          <folding>
-            <element signature="e#322#347#0" expanded="false" />
-            <element signature="e#381#1720#0" expanded="false" />
-            <element signature="e#413#460#0" expanded="false" />
-            <element signature="e#512#1720#0" expanded="false" />
-            <element signature="e#2065#2211#0" expanded="false" />
-            <element signature="e#2287#2410#0" expanded="false" />
+            <element signature="e#0#35#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -636,7 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -644,26 +593,144 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_user/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="23" column="105" lean-forward="false" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="105" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/apps/df_user/apps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="34" column="61" lean-forward="false" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
+        <state relative-caret-position="135">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_user/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="53" lean-forward="true" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="96" lean-forward="false" selection-start-line="13" selection-start-column="96" selection-end-line="13" selection-end-column="96" />
+        <state relative-caret-position="0">
+          <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#li#6;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#block#1;n#!!top" expanded="false" />
+            <element signature="e#8503#8580#0#DjangoTemplate" expanded="false" />
+            <element signature="e#8838#8879#0#HTML" expanded="false" />
+            <element signature="e#8912#8963#0#HTML" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_goods/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_goods/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_advertising/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_advertising/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tiantian/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tiantian/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_user/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+            <element signature="e#351#376#0" expanded="false" />
+            <element signature="e#410#1749#0" expanded="false" />
+            <element signature="e#442#489#0" expanded="false" />
+            <element signature="e#541#1749#0" expanded="false" />
+            <element signature="e#1780#2582#0" expanded="false" />
+            <element signature="e#2093#2239#0" expanded="false" />
+            <element signature="e#2614#2921#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_user/user_decorator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="36" column="60" lean-forward="false" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
