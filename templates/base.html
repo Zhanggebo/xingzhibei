@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<title>天天生鲜-用户中心</title>
     {% include 'base_css_js.html' %}
+    {% block css %}
+    {% endblock %}
 </head>
 <body>
 	<div class="header_con">
@@ -13,13 +15,16 @@
 			<div class="fr">
                 {% if request.session.is_login %}
                     <div class="login_info fl">
-                        欢迎您：<em>张 山</em>
+                        欢迎您：<em>{{ request.session.user_sno }}</em>
                     </div>
                 {% else %}
+
                     <div class="login_btn fl">
 					    <a href="{% url 'user:login' %}">登录</a>
 					    <span>|</span>
 					    <a href="{% url 'user:register' %}">注册</a>
+                        <span>|</span>
+					    <a href="{% url 'user:register' %}">关于我们</a>
 				    </div>
                 {% endif %}
 
@@ -28,11 +33,11 @@
                         <span>|</span>
                         <a href="{% url 'user:user_center_info' %}">用户中心</a>
                         <span>|</span>
-                        <a href="cart.html">我的购物车</a>
+                        <a href="{% url 'user:cart' %}">我的购物车</a>
                         <span>|</span>
-                        <a href="user_center_order.html">我的订单</a>
+                        <a href="{% url 'user:user_center_order' %}">我的订单</a>
                         <span>|</span>
-                        <a href="user_center_order.html">我的商品</a>
+                        <a href="#"  style="text-decoration:line-through;" onclick="alert('暂未开发完成,敬请期待')">我的商品</a>
                         <span>|</span>
                         <a href="{% url 'user:logout' %}">退出账号</a>
                     </div>
@@ -49,18 +54,23 @@
 		</div>
         {% if request.session.is_login %}
             <div class="guest_cart fr">
-                <a href="#" class="cart_name fl">我的购物车</a>
+                <a href="{% url 'user:cart' %}" class="cart_name fl">我的购物车</a>
                 <div class="goods_count fl" id="show_count">1</div>
             </div>
         {% endif %}
 	</div>
 
 {% block body %}
+
 {% endblock %}
 
 
 
 {% include 'base_foot.html' %}
+
+
+
+
 
 </body>
 </html>

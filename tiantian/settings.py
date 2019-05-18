@@ -32,7 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-AUTH_USER_MODEL = 'df_user.UserProfile'
+# AUTH_USER_MODEL = 'df_user.UserProfile'
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     # apps
     'apps.df_user',
     'apps.df_goods',
-    'apps.df_advertising',
+    'apps.ad',
+
     # 富文本编辑器
     'tinymce'
 ]
@@ -74,6 +75,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },

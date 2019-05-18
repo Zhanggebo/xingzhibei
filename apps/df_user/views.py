@@ -110,6 +110,13 @@ def logout(request):
 
 # 用户
 
+class Cart(View):
+
+    @user_decorator.login
+    def get(self, request):
+        return render(request, 'df_user/cart.html')
+
+
 class UserCenterInfo(View):
 
     @user_decorator.login
@@ -134,4 +141,15 @@ class UserCenterInfo(View):
         }
         return render(request, 'df_user/user_center_info.html', context)
 
+class UserCenterOrder(View):
+
+    @user_decorator.login
+    def get(self, request):
+
+        return render(request, 'df_user/user_center_order.html')
+
+class UserCenterSite(View):
+    @user_decorator.login
+    def get(self, request):
+        return render(request, 'df_user/user_center_site.html')
 

@@ -11,7 +11,7 @@ $(function(){
 	$slides.each(function(index, el) {
 		var $li = $('<li>');
 
-		if(index==0)
+		if(index===0)
 		{
 			$li.addClass('active');
 		}
@@ -21,7 +21,7 @@ $(function(){
 	$points = $('.points li');
 	timer = setInterval(autoplay,4000);
 
-	$('.slide').mouseenter(function() {
+	$(".slide").mouseenter(function() {
 		clearInterval(timer);
 	});
 
@@ -42,7 +42,7 @@ $(function(){
 		}
 		nowli = $(this).index();
 
-		if(nowli==prevli)
+		if(nowli===prevli)
 		{
 			return;
 		}
@@ -82,7 +82,7 @@ $(function(){
 		if(nowli<0)
 		{
 			nowli=len-1;
-			prevli = 0
+			prevli = 0;
 			$slides.eq(nowli).css({left:-760});
 			$slides.eq(nowli).animate({left:0},800,'easeOutExpo');
 			$slides.eq(prevli).animate({left:760},800,'easeOutExpo',function(){
@@ -127,4 +127,4 @@ $(function(){
 		}
 
 	}
-})
+});
