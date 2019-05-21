@@ -144,3 +144,11 @@ SESSION_COOKIE_AGE = 60*30
 # SESSION_EXPIRE_AT_BROWSER_CLOSE =  True
 # 每次请求都要保存一下session
 SESSION_SAVE_EVERY_REQUEST = True
+
+
+
+
+# SimpleSetting
+
+# 配置后台logo
+SIMPLEUI_LOGO = 'https://tse1-mm.cn.bing.net/th?id=OIP.CBDn9VJAXW5YcmKQgfySwQHaFj&w=238&h=177&c=7&o=5&pid=1.7'

@@ -16,9 +16,11 @@ Including another URLconf
 from django.urls import path
 
 from .views import Index
+from .views import Detail
 
 app_name = 'goods'
 
 urlpatterns = [
     path('', Index.as_view(),  name='index'),
+    path('detail/', Detail.as_view(),  name='detail'),
 ]

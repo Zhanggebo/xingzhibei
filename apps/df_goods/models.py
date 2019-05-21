@@ -18,8 +18,17 @@ class GoodsType(models.Model):
 
 # 商品信息
 class GoodsInfo(models.Model):
+    DEGREE = (
+        ('9', '9成'),
+        ('8', '前端'),
+        ('7', '日记'),
+        ('6', 'Linux'),
+        ('5', '5成以下'),
+    )
+
     goods_name = models.CharField(max_length=30, verbose_name='商品名称')
     goods_detail = models.CharField(max_length=200, verbose_name='商品描述')
+    goods_degree = models.CharField(verbose_name='商品新旧程度', choices=DEGREE, max_length=16)
     goods_introduce = HTMLField(verbose_name='商品介绍页')
 
     goods_pic = models.ImageField(upload_to='goods/%Y/%m', blank=True, verbose_name='商品图片')

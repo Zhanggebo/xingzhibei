@@ -1,14 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block title %}
+    C2C校园二手交易平台
+{% endblock %}
+
 {% block css %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 {% endblock %}
+
 {% block body %}
     <div class="navbar_con">
 		<div class="navbar">
 			<h1 class="fl">全部商品分类</h1>
 			<ul class="navlist fl">
-				<li><a href="">首页</a></li>
+				<li><a href="{% url 'goods:index' %}">首页</a></li>
 				<li class="interval">|</li>
 				<li><a href="">商城</a></li>
 				<li class="interval">|</li>
@@ -41,7 +47,8 @@
 			<ul class="points"></ul>
 		</div>
 		<div class="adv fl">
-			<a href="#"><img src="{% static 'images/logo/qrcode_for_gh_1720a07a4e70_258.jpg' %}" title="66666"></a>
+			<a href="#"><img src="{% static 'images/logo/qrcode_for_gh_1720a07a4e70_258.jpg' %}" title="关注我们,获得最新资讯" width="240" height="240"></a>
+            <div><a href="">欢迎加入我们</a></div>
 		</div>
 	</div>
 

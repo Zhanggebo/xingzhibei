@@ -24,3 +24,9 @@ class Index(View):
             'user_sno': user_sno,
             'all_ads': all_ads,
         })
+
+
+class Detail(View):
+
+    def get(self,request):
+        return render(request, 'detail.html')

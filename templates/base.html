@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>天天生鲜-用户中心</title>
+	<title>{% block title %}{% endblock %}--星之贝</title>
     {% include 'base_css_js.html' %}
     {% block css %}
     {% endblock %}
@@ -37,7 +37,7 @@
                         <span>|</span>
                         <a href="{% url 'user:user_center_order' %}">我的订单</a>
                         <span>|</span>
-                        <a href="#"  style="text-decoration:line-through;" onclick="alert('暂未开发完成,敬请期待')">我的商品</a>
+                        <a href="{% url 'goods:detail' %}"  style="text-decoration:line-through;" onclick="alert('暂未开发完成,敬请期待')">我的商品</a>
                         <span>|</span>
                         <a href="{% url 'user:logout' %}">退出账号</a>
                     </div>

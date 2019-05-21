@@ -2,42 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a172d3e6-8753-422d-bbf5-a944ceee2f74" name="默认的" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/ad/admin.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/ad/apps.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/ad/models.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_user/migrations/0004_auto_20190518_2020.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_user/migrations/0005_auto_20190518_2021.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_user/migrations/0006_auto_20190518_2213.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/apps/df_goods/migrations/0002_goodsinfo_goods_degree.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/apps/df_advertising/__init__.py" afterPath="$PROJECT_DIR$/apps/ad/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/apps/df_advertising/admin.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/apps/df_advertising/apps.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/apps/df_advertising/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/apps/ad/migrations/0001_initial.py" />
-      <change beforePath="$PROJECT_DIR$/apps/df_advertising/migrations/__init__.py" afterPath="$PROJECT_DIR$/apps/ad/migrations/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/apps/df_advertising/models.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/apps/df_advertising/tests.py" afterPath="$PROJECT_DIR$/apps/ad/tests.py" />
-      <change beforePath="$PROJECT_DIR$/apps/df_advertising/views.py" afterPath="$PROJECT_DIR$/apps/ad/views.py" />
-      <change beforePath="$PROJECT_DIR$/apps/df_goods/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/apps/df_goods/migrations/0001_initial.py" />
+      <change beforePath="$PROJECT_DIR$/apps/ad/__init__.py" afterPath="$PROJECT_DIR$/apps/ad/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/apps/ad/admin.py" afterPath="$PROJECT_DIR$/apps/ad/admin.py" />
+      <change beforePath="$PROJECT_DIR$/apps/ad/apps.py" afterPath="$PROJECT_DIR$/apps/ad/apps.py" />
+      <change beforePath="$PROJECT_DIR$/apps/df_goods/models.py" afterPath="$PROJECT_DIR$/apps/df_goods/models.py" />
+      <change beforePath="$PROJECT_DIR$/apps/df_goods/urls.py" afterPath="$PROJECT_DIR$/apps/df_goods/urls.py" />
       <change beforePath="$PROJECT_DIR$/apps/df_goods/views.py" afterPath="$PROJECT_DIR$/apps/df_goods/views.py" />
-      <change beforePath="$PROJECT_DIR$/apps/df_user/admin.py" afterPath="$PROJECT_DIR$/apps/df_user/admin.py" />
-      <change beforePath="$PROJECT_DIR$/apps/df_user/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/apps/df_user/migrations/0001_initial.py" />
-      <change beforePath="$PROJECT_DIR$/apps/df_user/migrations/0002_auto_20190511_2152.py" afterPath="$PROJECT_DIR$/apps/df_user/migrations/0002_userprofile_user_college.py" />
-      <change beforePath="$PROJECT_DIR$/apps/df_user/migrations/0003_auto_20190511_2159.py" afterPath="$PROJECT_DIR$/apps/df_user/migrations/0003_auto_20190518_2019.py" />
-      <change beforePath="$PROJECT_DIR$/apps/df_user/migrations/0004_userprofile_user_address.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/apps/df_user/models.py" afterPath="$PROJECT_DIR$/apps/df_user/models.py" />
-      <change beforePath="$PROJECT_DIR$/apps/df_user/urls.py" afterPath="$PROJECT_DIR$/apps/df_user/urls.py" />
-      <change beforePath="$PROJECT_DIR$/apps/df_user/views.py" afterPath="$PROJECT_DIR$/apps/df_user/views.py" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change beforePath="$PROJECT_DIR$/static/css/main.css" afterPath="$PROJECT_DIR$/static/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/static/js/slide.js" afterPath="$PROJECT_DIR$/static/js/slide.js" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change beforePath="$PROJECT_DIR$/templates/base_css_js.html" afterPath="$PROJECT_DIR$/templates/base_css_js.html" />
-      <change beforePath="$PROJECT_DIR$/templates/df_user/user_center_info.html" afterPath="$PROJECT_DIR$/templates/df_user/user_center_info.html" />
-      <change beforePath="$PROJECT_DIR$/templates/df_user/user_center_order.html" afterPath="$PROJECT_DIR$/templates/df_user/user_center_order.html" />
-      <change beforePath="$PROJECT_DIR$/templates/df_user/user_center_site.html" afterPath="$PROJECT_DIR$/templates/df_user/user_center_site.html" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/_bak.html" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
       <change beforePath="$PROJECT_DIR$/tiantian/settings.py" afterPath="$PROJECT_DIR$/tiantian/settings.py" />
-      <change beforePath="$PROJECT_DIR$/tiantian/urls.py" afterPath="$PROJECT_DIR$/tiantian/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,50 +27,17 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/df_goods/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="114" column="26" lean-forward="false" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2165.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/images/img/2165.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/df_goods/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="slide.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/slide.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3078">
-              <caret line="129" column="3" lean-forward="false" selection-start-line="129" selection-start-column="3" selection-end-line="129" selection-end-column="3" />
-              <folding />
+            <state relative-caret-position="216">
+              <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+              <folding>
+                <element signature="e#136#513#0" expanded="false" />
+                <element signature="e#492#513#0" expanded="false" />
+                <element signature="e#558#1615#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,6 +63,9 @@
       <find>&quot;(images/img/.*?)&quot;</find>
       <find>right_</find>
       <find>new_goods</find>
+      <find>image</find>
+      <find>(&quot;images/.*?&quot;)</find>
+      <find>&quot;(images/.*?)&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>{% static '$1'%&quot;</replace>
@@ -126,10 +73,11 @@
       <replace>{%static $1 %}</replace>
       <replace>{%static $1 %}&quot;</replace>
       <replace>&quot;{%static $1 %}&quot;</replace>
-      <replace>{% static $1 %}</replace>
       <replace>&quot;{% static $1 %}</replace>
       <replace>&quot;{% static $1 %}&quot;</replace>
       <replace>&quot;{% static '$1' %}&quot;</replace>
+      <replace>{% static $1 %}</replace>
+      <replace>{% static '$1' %}</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -145,12 +93,10 @@
         <option value="$PROJECT_DIR$/templates/df_user/register.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/apps/df_goods/admin.py" />
-        <option value="$PROJECT_DIR$/apps/df_goods/urls.py" />
         <option value="$PROJECT_DIR$/templates/df_user/login.html" />
         <option value="$PROJECT_DIR$/apps/df_user/apps.py" />
         <option value="$PROJECT_DIR$/apps/df_user/__init__.py" />
         <option value="$PROJECT_DIR$/apps/df_user/user_decorator.py" />
-        <option value="$PROJECT_DIR$/apps/df_goods/models.py" />
         <option value="$PROJECT_DIR$/templates/df_user/cart.html" />
         <option value="$PROJECT_DIR$/templates/base_css_js.html" />
         <option value="$PROJECT_DIR$/apps/test1/admin.py" />
@@ -159,21 +105,26 @@
         <option value="$PROJECT_DIR$/apps/df_advertising/models.py" />
         <option value="$PROJECT_DIR$/apps/ad/models.py" />
         <option value="$PROJECT_DIR$/tiantian/urls.py" />
-        <option value="$PROJECT_DIR$/apps/ad/admin.py" />
         <option value="$PROJECT_DIR$/apps/df_user/urls.py" />
         <option value="$PROJECT_DIR$/templates/df_user/user_center_order.html" />
         <option value="$PROJECT_DIR$/templates/df_user/user_center_info.html" />
         <option value="$PROJECT_DIR$/templates/df_user/user_center_site.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/tiantian/settings.py" />
         <option value="$PROJECT_DIR$/../../../old/css/main.css" />
         <option value="$PROJECT_DIR$/apps/df_user/admin.py" />
         <option value="$PROJECT_DIR$/apps/df_user/views.py" />
         <option value="$PROJECT_DIR$/apps/df_user/models.py" />
-        <option value="$PROJECT_DIR$/apps/df_goods/views.py" />
         <option value="$PROJECT_DIR$/static/js/slide.js" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/apps/ad/admin.py" />
         <option value="$PROJECT_DIR$/static/css/main.css" />
+        <option value="$PROJECT_DIR$/apps/ad/__init__.py" />
+        <option value="$PROJECT_DIR$/apps/ad/apps.py" />
+        <option value="$PROJECT_DIR$/tiantian/settings.py" />
+        <option value="$PROJECT_DIR$/apps/df_goods/urls.py" />
+        <option value="$PROJECT_DIR$/apps/df_goods/views.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/apps/df_goods/models.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/detail.html" />
       </list>
     </option>
   </component>
@@ -184,8 +135,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2134" />
-    <option name="y" value="248" />
+    <option name="x" value="1912" />
+    <option name="y" value="22" />
     <option name="width" value="1936" />
     <option name="height" value="1066" />
   </component>
@@ -207,6 +158,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,38 +166,15 @@
               <item name="tiantian" type="b2602c69:ProjectViewProjectNode" />
               <item name="tiantian" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tiantian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tiantian" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tiantian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tiantian" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tiantian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tiantian" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tiantian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tiantian" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../obj2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -253,19 +182,19 @@
     <property name="ignore_missing_gitignore" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\templates\df_user" />
-      <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\static\images\img" />
-      <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\static\css" />
-      <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\static" />
-      <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\static\images\logo" />
       <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\apps" />
       <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\static\images" />
       <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\templates\df_user" />
       <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\templates" />
+      <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\templates\df_user" />
+      <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\static\images\img" />
+      <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\static\css" />
+      <recent name="C:\Users\Dell\Desktop\objs\tiantian\tiantian\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -323,20 +252,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="22" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5091496" sideWeight="0.5063966" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33046287" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26264802" sideWeight="0.4978678" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28094727" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15884861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1652452" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@tiantian" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34660926" sideWeight="0.4936034" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08848614" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -345,6 +272,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="manage.py@tiantian" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34660926" sideWeight="0.4936034" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -365,26 +293,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/images/slide.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-279">
-            <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/icons.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/df_user/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -418,13 +326,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base_css_js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -465,24 +366,10 @@
     <entry file="file://$PROJECT_DIR$/apps/df_advertising/tests.py" />
     <entry file="file://$PROJECT_DIR$/apps/df_advertising/models.py" />
     <entry file="file://$PROJECT_DIR$/apps/df_advertising/admin.py" />
-    <entry file="file://$PROJECT_DIR$/apps/ad/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/ad/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tiantian/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -521,20 +408,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/df_goods/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/df_goods/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/df_user/user_center_site.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="581">
@@ -542,58 +415,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tiantian/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/standardSchemas/xhtml1-transitional.dtd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="538" column="10" lean-forward="false" selection-start-line="538" selection-start-column="10" selection-end-line="538" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../old/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../old/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="194" column="0" lean-forward="true" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../old/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="57" lean-forward="false" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../old/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/../../../old/css/main.css" />
+    <entry file="file://$PROJECT_DIR$/../../../old/list.html" />
     <entry file="file://$PROJECT_DIR$/apps/df_user/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -601,7 +436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -609,9 +443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -619,7 +450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="18" column="62" lean-forward="false" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -627,9 +457,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="933">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#29#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -637,47 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="95" column="25" lean-forward="true" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
-          <folding>
-            <element signature="e#351#376#0" expanded="false" />
-            <element signature="e#410#1749#0" expanded="false" />
-            <element signature="e#442#489#0" expanded="false" />
-            <element signature="e#541#1749#0" expanded="false" />
-            <element signature="e#805#857#0" expanded="false" />
-            <element signature="e#935#987#0" expanded="false" />
-            <element signature="e#1144#1209#0" expanded="false" />
-            <element signature="e#1220#1236#0" expanded="false" />
-            <element signature="e#1661#1706#0" expanded="false" />
-            <element signature="e#1812#1856#0" expanded="false" />
-            <element signature="e#2093#2239#0" expanded="false" />
-            <element signature="e#2189#2238#0" expanded="false" />
-            <element signature="e#2315#2438#0" expanded="false" />
-            <element signature="e#2388#2437#0" expanded="false" />
-            <element signature="e#2614#2921#0" expanded="false" />
-            <element signature="e#2668#2727#0" expanded="false" />
-            <element signature="e#2760#2771#0" expanded="false" />
-            <element signature="e#3011#3054#0" expanded="false" />
-            <element signature="e#3090#3818#0" expanded="false" />
-            <element signature="e#3854#3969#0" expanded="false" />
-            <element signature="e#3913#3969#0" expanded="false" />
-            <element signature="e#4003#4116#0" expanded="false" />
-            <element signature="e#4061#4116#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/slide.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3078">
-          <caret line="129" column="3" lean-forward="false" selection-start-line="129" selection-start-column="3" selection-end-line="129" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/df_goods/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -686,19 +472,106 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/slide.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="129" column="3" lean-forward="false" selection-start-line="129" selection-start-column="3" selection-end-line="129" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
+        <state relative-caret-position="198">
           <caret line="114" column="26" lean-forward="false" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/ad/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/ad/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="44" lean-forward="true" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/ad/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tiantian/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="154" column="0" lean-forward="true" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tiantian/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="28" column="39" lean-forward="false" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_goods/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="31" column="45" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_goods/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base_css_js.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="432">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="36" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_goods/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#136#513#0" expanded="false" />
+            <element signature="e#492#513#0" expanded="false" />
+            <element signature="e#558#1615#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

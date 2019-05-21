@@ -112,7 +112,7 @@ html,body{height:100%}
 .points li{display:inline-block;width:11px;height:11px;margin:0 5px;background-color:#9f9f9f;border-radius:50%;cursor:pointer;}
 .points li.active{background-color:#cecece}
 
-.adv{width:240px;height:250px; overflow:hidden; background-color:gold;}
+.adv{width:240px;height:270px; overflow:hidden; background-color:gold;}
 .adv a{display:block;float:left;}
 
 
