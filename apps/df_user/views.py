@@ -4,7 +4,7 @@ from django.contrib.auth.hashers import make_password
 from django.http import JsonResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 
-from .models import UserProfile
+from .models import UserProfile,College
 
 from . import user_decorator
 
@@ -93,6 +93,8 @@ class Login(View):
         # 登录成功设置session
         request.session['is_login'] = True
         request.session['user_sno'] = user_sno
+        request.session['user_name'] = user[0].user_name
+        request.session['user_id'] = user[0].id
         return redirect('/')
 
 # 登出
@@ -118,28 +120,39 @@ class Cart(View):
 
 
 class UserCenterInfo(View):
-
     @user_decorator.login
     def get(self, request):
-        print(request.session.get('user_sno'))
+        # 获取当前用户的信息
         user_sno = request.session.get('user_sno')
         user = UserProfile.objects.filter(user_sno=user_sno)
-        print(user)
-
         user_colege = user[0].user_college
         user_sno = user[0].user_sno
         user_name = user[0].user_name
         user_mobile = user[0].user_mobile
         user_address = user[0].user_address
 
+        # 获取所有学院
+        all_colleges = College.objects.all()
         context = {
             'user_colege': user_colege,
             'user_sno': user_sno,
             'user_name': user_name,
             'user_mobile': user_mobile,
             'user_address': user_address,
+            'all_colleges': all_colleges,
         }
         return render(request, 'df_user/user_center_info.html', context)
+
+    def post(self, request):
+        # 获取提交过来的信息
+        user_colloge_id = request.POST.get('user_colloge_id')
+        user_id = request.POST.get('user_id')
+        user_name = request.POST.get('user_name')
+        user_mobile = request.POST.get('user_mobile')
+        # 找到这个用户
+        user = UserProfile.objects.filter(id=user_id)
+        user.update(user_college=user_colloge_id, user_name=user_name, user_mobile=user_mobile)
+        return HttpResponse('ok')
 
 class UserCenterOrder(View):
 

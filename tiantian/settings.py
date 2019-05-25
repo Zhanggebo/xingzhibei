@@ -49,7 +49,10 @@ INSTALLED_APPS = [
     'apps.ad',
 
     # 富文本编辑器
-    'tinymce'
+    'tinymce',
+    # 后台导入导出
+    'import_export',
+
 ]
 
 MIDDLEWARE = [

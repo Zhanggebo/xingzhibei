@@ -22,7 +22,8 @@ from django.urls import path, include
 
 
 
-
+admin.site.site_title = "后台管理——星之贝"
+admin.site.site_header = "星之贝后台管理"
 
 urlpatterns = [
     path('admin/', admin.site.urls),

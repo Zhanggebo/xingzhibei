@@ -1,68 +1,39 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<title>天天生鲜-商品列表</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
-<body>
-	<div class="header_con">
-		<div class="header">
-			<div class="welcome fl">欢迎来到天天生鲜!</div>
-			<div class="fr">
-				<div class="login_info fl">
-					欢迎您：<em>张 山</em>
-				</div>
-				<div class="login_btn fl">
-					<a href="login.html">登录</a>
-					<span>|</span>
-					<a href="register.html">注册</a>
-				</div>
-				<div class="user_link fl">
-					<span>|</span>
-					<a href="user_center_info.html">用户中心</a>
-					<span>|</span>
-					<a href="cart.html">我的购物车</a>
-					<span>|</span>
-					<a href="user_center_order.html">我的订单</a>
-				</div>
-			</div>
-		</div>		
-	</div>
+	{% extends 'base.html' %}
+{% load static %}
 
-	<div class="search_bar clearfix">
-		<a href="index.html" class="logo fl"><img src="images/logo.png"></a>
-		<div class="search_con fl">
-			<input type="text" class="input_text fl" name="" placeholder="搜索商品">
-			<input type="button" class="input_btn fr" name="" value="搜索">
-		</div>
-		<div class="guest_cart fr">
-			<a href="#" class="cart_name fl">我的购物车</a>
-			<div class="goods_count fl">1</div>
-		</div>
-	</div>
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
 
+{% block title %}
+    商品列表
+{% endblock %}
+
+{% block body %}
 	<div class="navbar_con">
 		<div class="navbar clearfix">
 			<div class="subnav_con fl">
-				<h1>全部商品分类</h1>	
-				<span></span>			
+				<h1>全部商品分类</h1>
+				<span></span>
 				<ul class="subnav">
-					<li><a href="#" class="fruit">新鲜水果</a></li>
-					<li><a href="#" class="seafood">海鲜水产</a></li>
-					<li><a href="#" class="meet">猪牛羊肉</a></li>
-					<li><a href="#" class="egg">禽类蛋品</a></li>
-					<li><a href="#" class="vegetables">新鲜蔬菜</a></li>
-					<li><a href="#" class="ice">速冻食品</a></li>
+                    <li><a href="#" class="fruit">服装配饰</a></li>
+                    <li><a href="#" class="seafood">数码科技</a></li>
+                    <li><a href="#" class="meet">运动代步</a></li>
+                    <li><a href="#" class="egg">书籍文具</a></li>
+                    <li><a href="#" class="vegetables">公益服务</a></li>
+                    <li><a href="#" class="ice">其他</a></li>
 				</ul>
 			</div>
 			<ul class="navlist fl">
-				<li><a href="">首页</a></li>
+				<li><a href="{% url 'goods:index' %}">首页</a></li>
 				<li class="interval">|</li>
-				<li><a href="">手机生鲜</a></li>
+				<li><a href="">商城</a></li>
 				<li class="interval">|</li>
-				<li><a href="">抽奖</a></li>
+				<li><a href="">求购商城</a></li>
+                <li class="interval">|</li>
+				<li><a href="" style="text-decoration:line-through;" onclick="alert('暂未开发完成,敬请期待')">公益活动</a></li>
+                <li class="interval">|</li>
+				<li><a href="">关于我们</a></li>
 			</ul>
 		</div>
 	</div>
@@ -70,7 +41,7 @@
 	<div class="breadcrumb">
 		<a href="#">全部分类</a>
 		<span>></span>
-		<a href="#">新鲜水果</a>
+		<a href="#">最新物品</a>
 	</div>
 
 	<div class="main_wrap clearfix">
@@ -79,14 +50,32 @@
 				<h3>新品推荐</h3>
 				<ul>
 					<li>
-						<a href="#"><img src="images/goods/goods001.jpg"></a>
-						<h4><a href="#">进口柠檬</a></h4>
+
+						<a href="#"><img src={% static 'images/goods/1.jpg' %}></a>
+						<h4><a href="#">天然草莓晶手链女韩版双层石榴石简约学生个性森系闺蜜清新礼物女</a></h4>
 						<div class="prize">￥3.90</div>
+						<div class="operate">
+							<a href="cart.html" class="add_goods" title="加入购物车"></a>
+							</div>
 					</li>
 					<li>
-						<a href="#"><img src="images/goods/goods002.jpg"></a>
-						<h4><a href="#">玫瑰香葡萄</a></h4>
+
+					<a href="#"><img src={% static 'images/goods/2.jpg' %}></a>
+					<h4><a href="#">蛋糕连衣裙</a></h4>
+					<div class="prize">¥ 30.00</div>
+					<div class="operate">
+							<a href="cart.html" class="add_goods" title="加入购物车"></a>
+							</div>
+				</li>
+					<li>
+
+						<a href="#"><img src={% static 'images/goods/3.jpg' %}></a>
+						<h4><a href="#">电动榨汁杯</a></h4>
 						<div class="prize">￥16.80</div>
+						<div class="operate">
+							<a href="cart.html" class="add_goods" title="加入购物车"></a>
+							</div>
+
 					</li>
 				</ul>
 			</div>
@@ -101,137 +90,146 @@
 
 			<ul class="goods_type_list clearfix">
 				<li>
-					<a href="detail.html"><img src="images/goods/goods003.jpg"></a>
-					<h4><a href="detail.html">大兴大棚草莓</a></h4>
+					<a href="detail.html"><img src={% static 'images/goods/4.jpg' %}></a>
+					<h4><a href="detail.html">旅行包</a></h4>
 					<div class="operate">
 						<span class="prize">￥16.80</span>
-						<span class="unit">16.80/500g</span>
-						<a href="#" class="add_goods" title="加入购物车"></a>
+						<span class="unit">原价：50</span>
+						<a href="cart.html" class="add_goods" title="加入购物车"></a>
 					</div>
 				</li>
 
 				<li>
-					<a href="#"><img src="images/goods/goods004.jpg"></a>
-					<h4><a href="#">吐鲁番梨光杏</a></h4>
+					<a href="#"><img src={% static 'images/goods/5.jpg' %}></a>
+					<h4><a href="#">转运珠手链</a></h4>
 					<div class="operate">
 						<span class="prize">￥5.50</span>
-						<span class="unit">5.50/500g</span>
+						<span class="unit">原价：50</span>
 						<a href="#" class="add_goods" title="加入购物车"></a>
 					</div>
 				</li>
 
 				<li>
-					<a href="#"><img src="images/goods/goods005.jpg"></a>
-					<h4><a href="#">黄肉桃</a></h4>
+					<a href="#"><img src={% static 'images/goods/6.jpg' %}></a>
+					<h4><a href="#">仙女宅女裤</a></h4>
 					<div class="operate">
 						<span class="prize">￥10.00</span>
-						<span class="unit">10.00/500g</span>
+						<span class="unit">原价：50</span>
 						<a href="#" class="add_goods" title="加入购物车"></a>
 					</div>
 				</li>
 
 				<li>
-					<a href="#"><img src="images/goods/goods006.jpg"></a>
-					<h4><a href="#">进口西梅</a></h4>
+					<a href="#"><img src={% static 'images/goods/7.jpg' %}></a>
+					<h4><a href="#">美国ENVIROFIT 圆形碳烤炉</a></h4>
 					<div class="operate">
 						<span class="prize">￥28.80</span>
-						<span class="unit">28.8/500g</span>
+						<span class="unit">原价：50</span>
 						<a href="#" class="add_goods" title="加入购物车"></a>
 					</div>
 				</li>
 
 				<li>
-					<a href="#"><img src="images/goods/goods007.jpg"></a>
-					<h4><a href="#">香梨</a></h4>
+					<a href="#"><img src={% static 'images/goods/8.jpg' %}></a>
+					<h4><a href="#">夏季刺绣韩版宽松显瘦原宿短袖打底衫上衣学生百搭套头polo领</a></h4>
 					<div class="operate">
 						<span class="prize">￥6.45</span>
-						<span class="unit">6.45/500g</span>
+						<span class="unit">原价：50</span>
 						<a href="#" class="add_goods" title="加入购物车"></a>
 					</div>
 				</li>
 
 				<li>
-					<a href="#"><img src="images/goods/goods008.jpg"></a>
-					<h4><a href="#">栗子</a></h4>
+					<a href="#"><img src={% static 'images/goods/9.jpg' %}></a>
+					<h4><a href="#">METWO STUDIO碎花裙秋款新款</a></h4>
 					<div class="operate">
 						<span class="prize">￥9.50</span>
-						<span class="unit">9.50/500g</span>
+						<span class="unit">原价：50</span>
 						<a href="#" class="add_goods" title="加入购物车"></a>
 					</div>
 				</li>
 
 				<li>
-					<a href="#"><img src="images/goods/goods009.jpg"></a>
-					<h4><a href="#">海南香蕉</a></h4>
+					<a href="#"><img src={% static 'images/goods/10.jpg' %}></a>
+					<h4><a href="#">荣事达充电便携式榨汁杯家用水果小型学生迷你电动榨汁机</a></h4>
 					<div class="operate">
 						<span class="prize">￥3.30</span>
-						<span class="unit">3.30/500g</span>
+						<span class="unit">原价：50</span>
 						<a href="#" class="add_goods" title="加入购物车"></a>
 					</div>
 				</li>
 
 				<li>
-					<a href="#"><img src="images/goods/goods010.jpg"></a>
-					<h4><a href="#">青苹果</a></h4>
+					<a href="#"><img src={% static 'images/goods/11.jpg' %}></a>
+					<h4><a href="#">情侣大码莫代尔睡衣女秋冬纯棉长袖宽松闺蜜家居服宽…</a></h4>
 					<div class="operate">
 						<span class="prize">￥5.00</span>
-						<span class="unit">5.00/500g</span>
+						<span class="unit">原价：50</span>
 						<a href="#" class="add_goods" title="加入购物车"></a>
 					</div>
 				</li>
 
 				<li>
-					<a href="#"><img src="images/goods/goods011.jpg"></a>
-					<h4><a href="#">山莓</a></h4>
+					<a href="#"><img src={% static 'images/goods/12.jpg' %}></a>
+					<h4><a href="#">链子专拍链接</a></h4>
 					<div class="operate">
 						<span class="prize">￥28.80</span>
-						<span class="unit">28.8/500g</span>
+						<span class="unit">原价：50</span>
 						<a href="#" class="add_goods" title="加入购物车"></a>
 					</div>
 				</li>
 
 				<li>
-					<a href="#"><img src="images/goods/goods012.jpg"></a>
-					<h4><a href="#">奇异果</a></h4>
+					<a href="#"><img src={% static 'images/goods/13.jpg' %}></a>
+					<h4><a href="#">小米90分前开盖拉杆箱20寸，全新未拆封</a></h4>
 					<div class="operate">
-						<span class="prize">￥25.80</span>
-						<span class="unit">25.8/500g</span>
+						<span class="prize">原价：50</span>
+						<span class="unit"></span>
 						<a href="#" class="add_goods" title="加入购物车"></a>
 					</div>
 				</li>
 				<li>
-					<a href="#"><img src="images/goods/goods013.jpg"></a>
-					<h4><a href="#">蜜桔</a></h4>
+					<a href="#"><img src={% static 'images/goods/14.jpg' %}></a>
+					<h4><a href="#">天然水晶手串手链清仓甩（七条打包价）</a></h4>
 					<div class="operate">
 						<span class="prize">￥4.80</span>
-						<span class="unit">4.8/500g</span>
+						<span class="unit">原价：50</span>
 						<a href="#" class="add_goods" title="加入购物车"></a>
 					</div>
 				</li>
 				<li>
-					<a href="#"><img src="images/goods/goods014.jpg"></a>
-					<h4><a href="#">脐橙</a></h4>
+					<a href="#"><img src={% static 'images/goods/15.jpg' %}></a>
+					<h4><a href="#">包邮！包邮！包邮！韩都衣舍背带裙</a></h4>
 					<div class="operate">
 						<span class="prize">￥3.50</span>
-						<span class="unit">3.50/500g</span>
+						<span class="unit">原价：50</span>
 						<a href="#" class="add_goods" title="加入购物车"></a>
 					</div>
 				</li>
 				<li>
-					<a href="#"><img src="images/goods/goods001.jpg"></a>
-					<h4><a href="#">进口柠檬</a></h4>
+					<a href="#"><img src={% static 'images/goods/16.jpg' %}></a>
+					<h4><a href="#">HOTSTYLE迷你印花小背包女两用手…</a></h4>
 					<div class="operate">
 						<span class="prize">￥3.90</span>
-						<span class="unit">3.90/500g</span>
+						<span class="unit">原价：50</span>
 						<a href="#" class="add_goods" title="加入购物车"></a>
 					</div>
 				</li>
 				<li>
-					<a href="#"><img src="images/goods/goods002.jpg"></a>
-					<h4><a href="#">玫瑰香葡萄</a></h4>
+					<a href="#"><img src={% static 'images/goods/17.jpg' %}></a>
+					<h4><a href="#">钩花系带披肩女2019夏季短款雪纺防晒衣开衫空调衫外搭小披肩</a></h4>
 					<div class="operate">
 						<span class="prize">￥16.80</span>
-						<span class="unit">16.80/500g</span>
+						<span class="unit">原价：50</span>
+						<a href="#" class="add_goods" title="加入购物车"></a>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src={% static 'images/goods/18.jpg' %}></a>
+					<h4><a href="#">2019春夏新款吊带V领多层蛋糕裙连衣裙女裙子仙女超仙森系打</a></h4>
+					<div class="operate">
+						<span class="prize">￥16.80</span>
+						<span class="unit">原价：50</span>
 						<a href="#" class="add_goods" title="加入购物车"></a>
 					</div>
 				</li>
@@ -249,19 +247,41 @@
 		</div>
 	</div>
 
-	<div class="footer">
-		<div class="foot_link">
-			<a href="#">关于我们</a>
-			<span>|</span>
-			<a href="#">联系我们</a>
-			<span>|</span>
-			<a href="#">招聘人才</a>
-			<span>|</span>
-			<a href="#">友情链接</a>		
+
+	<!--右侧悬浮菜单-->
+	<div class="guide">
+		<div class="guide-wrap">
+			<a href="#" class="edit" title="常见问题"><span>常见问题</span></a>
+			<a href="#" class="find" title="购物车"><span>购物车</span></a>
+			<a href="#" class="report" title="在线咨询"><span>在线咨询</span></a>
+			<a href="javascript:window.scrollTo(0,0)" class="top" title="回顶部"><span>回顶部</span></a>
 		</div>
-		<p>CopyRight © 2016 北京天天生鲜信息技术有限公司 All Rights Reserved</p>
-		<p>电话：010-****888    京ICP备*******8号</p>
 	</div>
-	
-</body>
-</html>
+
+{% block js %}
+    <script type="text/javascript" src="{% static 'js/slide.js' %}"></script>
+    <script type="text/javascript">
+        BCSlideshow('focuspic');
+        var oFruit = document.getElementById('fruit_more');
+        var oShownum = document.getElementById('show_count');
+
+        var hasorder = localStorage.getItem('order_finish');
+
+        if(hasorder)
+        {
+            oShownum.innerHTML = '2';
+        }
+
+        oFruit.onclick = function(){
+            window.location.href = 'list.html';
+        }
+    </script>
+
+{% endblock %}
+
+{% endblock %}
+
+
+
+
+

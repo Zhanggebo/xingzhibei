@@ -15,7 +15,7 @@
 			<div class="fr">
                 {% if request.session.is_login %}
                     <div class="login_info fl">
-                        欢迎您：<em>{{ request.session.user_sno }}</em>
+                        欢迎您：<em>{{ request.session.user_name }}({{ request.session.user_sno }})</em>
                     </div>
                 {% else %}
 

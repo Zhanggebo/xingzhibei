@@ -1,13 +1,15 @@
 from django.contrib import admin
+from django.utils.safestring import mark_safe
 
-# Register your models here.
 from .models import Ad
-
-admin.site.site_title = "后台管理——星之贝"
-admin.site.site_header = "星之贝后台管理"
+# Register your models here.
 
 
+@admin.register(Ad)
 class AdAdmin(admin.ModelAdmin):
-    list_display = ['banner_describe', 'add_time', 'isDelete']
 
-admin.site.register(Ad, AdAdmin)
+    # 必须加这行 否则访问编辑页面会报错
+
+    readonly_fields = ('banner_imamge_url',)
+    list_display = ['banner_imamge_url', 'banner_describe', 'add_time', 'isDelete']
+

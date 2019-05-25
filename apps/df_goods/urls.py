@@ -16,11 +16,12 @@ Including another URLconf
 from django.urls import path
 
 from .views import Index
-from .views import Detail
+from .views import Detail, List
 
 app_name = 'goods'
 
 urlpatterns = [
     path('', Index.as_view(),  name='index'),
     path('detail/', Detail.as_view(),  name='detail'),
+    path('list/<str:classify>/', List.as_view(),  name='list'),
 ]
