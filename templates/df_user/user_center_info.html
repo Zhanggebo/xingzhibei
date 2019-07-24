@@ -2,9 +2,12 @@
 
 {% load static %}
 
+{% block title %}
+    个人信息
+{% endblock %}
 {% block css %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/boot.css' %}">
+{#    <link rel="stylesheet" href="{% static 'css/boot.css' %}">#}
 {% endblock %}
 
 {% block body %}
@@ -13,8 +16,7 @@
 			<h3>用户中心</h3>
 			<ul>
 				<li><a href="{% url 'user:user_center_info' %}" class="active" >· 个人信息</a></li>
-				<li><a href="{% url 'user:user_center_order' %}">· 全部订单</a></li>
-				<li><a href="{% url 'user:user_center_site' %}">· 收货地址</a></li>
+				<li><a href="{% url 'user:user_center_order' %}">· 我的订单</a></li>
 			</ul>
 		</div>
 		<div class="right_content clearfix">
@@ -75,29 +77,6 @@
 													<option value = "1">1号楼</option>
 													<option value = "2">2号楼</option>
 													<option value = "3">3号楼</option>
-													<option value = "4">4号楼</option>
-													<option value = "5">5号楼</option>
-													<option value = "6">6号楼</option>
-													<option value = "7">7号楼</option>
-													<option value = "8">8号楼</option>
-													<option value = "9">9号楼</option>
-													<option value = "10">10号楼</option>
-													<option value = "11">11号楼</option>
-													<option value = "...">12号楼</option>
-													<option value = "...">13号楼</option>
-													<option value = "...">14号楼</option>
-													<option value = "...">15号楼</option>
-													<option value = "...">16号楼</option>
-													<option value = "...">17号楼</option>
-													<option value = "...">18号楼</option>
-													<option value = "...">19号楼</option>
-													<option value = "...">20号楼</option>
-													<option value = "...">21号楼</option>
-													<option value = "...">22号楼</option>
-													<option value = "...">23号楼</option>
-													<option value = "...">24号楼</option>
-													<option value = "...">25号楼</option>
-													<option value = "...">26号楼</option>
 												</select>
 												<select class="form-control-1" id="adr" style="float: left ">
 													<option value = "None" selected="selected">宿舍号</option>
@@ -204,7 +183,7 @@
                             <li><span>学院：</span>{{ user_colege }}</li>
 							<li><span>学号：</span>{{ user_sno }}</li>
 							<li><span>姓名：</span>{{ user_name }}</li>
-							<li><span>联系方式：</span>{{ user_mobile }}</li>
+							<li><span>手机号：</span>{{ user_mobile }}</li>
 							<li><span>联系地址：</span>{{ user_address }}</li>
 						</ul>
 				</div>
@@ -290,7 +269,7 @@
                     'user_mobile': user_mobile
                 },
                 success: function (date) {
-                    alert('提交成功');
+                    alert('修改成功');
                     window.location.reload();
                 }
 

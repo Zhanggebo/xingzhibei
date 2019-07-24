@@ -132,7 +132,7 @@ class UserCenterInfo(View):
         user_address = user[0].user_address
 
         # 获取所有学院
-        all_colleges = College.objects.all()
+        all_colleges = College.objects.all().order_by('-id')
         context = {
             'user_colege': user_colege,
             'user_sno': user_sno,

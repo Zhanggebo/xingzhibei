@@ -16,7 +16,7 @@
 			<ul class="navlist fl">
 				<li><a href="{% url 'goods:index' %}">首页</a></li>
 				<li class="interval">|</li>
-				<li><a href="{% url 'goods:list' 1 %}">商城</a></li>
+				<li><a href="">商城</a></li>
 				<li class="interval">|</li>
 				<li><a href="">求购商城</a></li>
                 <li class="interval">|</li>
@@ -57,12 +57,11 @@
 			<h3 class="fl" id="model01">服装配饰</h3>
 			<div class="subtitle fl">
 				<span>|</span>
-				<a href="#">女装</a>
-				<a href="#">男装</a>
-				<a href="#">鞋</a>
-				<a href="#">配饰</a>
+                {% for dress in all_dress %}
+                    <a href="#">{{ dress.name }}</a>
+                {% endfor %}
 			</div>
-			<a href="#" class="goods_more fr" id="fruit_more">查看更多 ></a>
+			<a href="{% url 'goods:list' 'dress' %}" class="goods_more fr" id="fruit_more">查看更多 ></a>
 		</div>
 
 		<div class="goods_con clearfix">
