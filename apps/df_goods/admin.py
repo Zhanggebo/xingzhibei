@@ -18,4 +18,4 @@ class GoodsCategoryAdmin(admin.ModelAdmin):
 @admin.register(GoodsInfo)
 class GoodsInfoAdmin(ImportExportModelAdmin):
     list_per_page = 15
-    list_display = ['id', 'goods_name', 'goods_price', 'goods_click', 'isDelete']
+    list_display = ['id', 'goods_name', 'goods_price', 'goods_type','goods_click', 'is_recommend' ,'isDelete']

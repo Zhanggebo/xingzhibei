@@ -86,6 +86,7 @@ class GoodsInfo(models.Model):
     goods_type = models.CharField(max_length=16, choices=TYPE, verbose_name='商品类型')
 
     isDelete = models.BooleanField(default=False, verbose_name='是否删除')
+    is_recommend = models.BooleanField(default=False, verbose_name='首页推荐')
     add_time = models.DateTimeField(auto_now_add=True, verbose_name='商品添加时间')
 
     class Meta:

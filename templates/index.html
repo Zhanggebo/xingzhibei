@@ -57,8 +57,8 @@
 			<h3 class="fl" id="model01">服装配饰</h3>
 			<div class="subtitle fl">
 				<span>|</span>
-                {% for dress in all_dress %}
-                    <a href="#">{{ dress.name }}</a>
+                {% for dress_classify in all_dress_classify %}
+                    <a href="#">{{ dress_classify.name }}</a>
                 {% endfor %}
 			</div>
 			<a href="{% url 'goods:list' 'dress' %}" class="goods_more fr" id="fruit_more">查看更多 ></a>
@@ -67,30 +67,16 @@
 		<div class="goods_con clearfix">
 			<div class="goods_banner fl"><img src="{% static 'images/img/nvkds.jpg' %}"></div>
 			<ul class="goods_list fl">
-				<li>
-					<h4><a href="#">女装</a></h4>
-					<a href="#"><img src="{% static 'images/img/nvdg=0.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 30.00</div>
-				</li>
-				<li>
-					<h4><a href="#">男装</a></h4>
-					<a href="#"><img src="{% static 'images/img/nflkpo.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 5.50</div>
-				</li>
-				<li>
-					<h4><a href="#">休闲</a></h4>
-					<a href="#"><img src="{% static 'images/img/nvdg=0.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 3.90</div>
-				</li>
-				<li>
-					<h4><a href="#">外衣</a></h4>
-					<a href="#"><img src="{% static 'images/img/nzldkfp.png' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 25.80</div>
-				</li>
+                {% for dress in recommend_dress %}
+                    <li>
+                        <h4><a href="{{ dress.goods.id }}">{{ dress.goods_name }}</a></h4>
+                        <a href="{% url 'goods:detail' %}?good_id={{ dress.id }}"><img src="{{ MEDIA_URL }}{{ dress.goods_pic }}"></a>
+                        <p style="text-align:center;">{{ dress.goods_detail }}</p>
+                        <div class="prize">¥ {{ dress.goods_price }}</div>
+                    </li>
+                {% endfor %}
+
+
 			</ul>
 		</div>
 	</div>
@@ -345,7 +331,7 @@
 
     <script>
         function is_login() {
-            alert('亲，您还没有登录哦。');
+            alert('亲，您还没有登录哦。为了更好的用户体验,还请您登陆哦.');
         }
         {% if not request.session.is_login %}
             is_login();
