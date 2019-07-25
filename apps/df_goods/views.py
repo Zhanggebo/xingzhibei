@@ -19,12 +19,14 @@ class Index(View):
         # 获取所有的商品
         all_goods = GoodsInfo.objects.all()
         recommend_dress = all_goods.filter(goods_type='costume', is_recommend=True)[:4]
+        recommend_electronics = all_goods.filter(goods_type='electronics', is_recommend=True)[:4]
 
         return render(request, 'index.html', {
             'all_ads': all_ads,
             'all_dress_classify': all_dress_classify,
 
             'recommend_dress': recommend_dress,
+            'recommend_electronics': recommend_electronics
         })
 
 

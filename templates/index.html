@@ -90,36 +90,22 @@
 				<a href="#">电脑</a>
 				<a href="#">相机</a>
 			</div>
-			<a href="#" class="goods_more fr">查看更多 ></a>
+			<a href="{% url 'goods:list' 'electronics' %}" class="goods_more fr">查看更多 ></a>
 		</div>
 
 		<div class="goods_con clearfix">
 			<div class="goods_banner fl"><img src="{% static 'images/img/554.jpg' %}"></div>
 			<ul class="goods_list fl">
-				<li>
-					<h4><a href="#">品牌手机</a></h4>
-					<a href="#"><img src="{% static 'images/img/15.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 48.00</div>
+                {% for recommend_electronic in recommend_electronics %}
+                				<li>
+					<h4><a href="#">{{ recommend_electronic.goods_detail }}</a></h4>
+					<a href="#"><img src="{{ MEDIA_URL }}{{ recommend_electronic.goods_pic }}"></a>
+					<p style="text-align:center;">{{ recommend_electronic.goods_name }}</p>
+					<div class="prize">¥ {{ recommend_electronic.goods_price }}</div>
 				</li>
-				<li>
-					<h4><a href="#">相机</a></h4>
-					<a href="#"><img src="{% static 'images/img/xjtp.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 46.00</div>
-				</li>
-				<li>
-					<h4><a href="#">电脑</a></h4>
-					<a href="#"><img src="{% static 'images/img/14527627742842.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 19.00</div>
-				</li>
-				<li>
-					<h4><a href="#">配件</a></h4>
-					<a href="#"><img src="{% static 'images/img/15.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 25.00</div>
-				</li>
+                {% endfor %}
+
+
 			</ul>
 		</div>
 	</div>
