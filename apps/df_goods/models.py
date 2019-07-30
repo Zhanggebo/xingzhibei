@@ -78,6 +78,7 @@ class GoodsInfo(models.Model):
     goods_detail = models.CharField(max_length=200, verbose_name='商品描述')
     goods_degree = models.CharField(verbose_name='商品新旧程度', choices=DEGREE, max_length=16)
     goods_introduce = HTMLField(verbose_name='商品介绍页')
+    goods_old_price = models.DecimalField(max_digits=5, decimal_places=2, verbose_name='商品原价(￥)', default=100)
     goods_price = models.DecimalField(max_digits=5, decimal_places=2, verbose_name='商品价格(￥)')
     goods_click = models.IntegerField(verbose_name='商品人气', default=0)
 

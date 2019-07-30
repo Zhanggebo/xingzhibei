@@ -11,319 +11,267 @@
 
 {% block body %}
     <div class="navbar_con">
-		<div class="navbar">
-			<h1 class="fl">全部商品分类</h1>
-			<ul class="navlist fl">
-				<li><a href="{% url 'goods:index' %}">首页</a></li>
-				<li class="interval">|</li>
-				<li><a href="">商城</a></li>
-				<li class="interval">|</li>
-				<li><a href="">求购商城</a></li>
+        <div class="navbar">
+            <h1 class="fl">全部商品分类</h1>
+            <ul class="navlist fl">
+                <li><a href="{% url 'goods:index' %}">首页</a></li>
                 <li class="interval">|</li>
-				<li><a href="" style="text-decoration:line-through;" onclick="alert('暂未开发完成,敬请期待')">公益活动</a></li>
+                <li><a href="">商城</a></li>
                 <li class="interval">|</li>
-				<li><a href="">关于我们</a></li>
-			</ul>
-		</div>
-	</div>
+                <li><a href="">求购商城</a></li>
+                <li class="interval">|</li>
+                <li><a href="" style="text-decoration:line-through;" onclick="alert('暂未开发完成,敬请期待')">公益活动</a></li>
+                <li class="interval">|</li>
+                <li><a href="">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
 
-	<div class="center_con clearfix">
-		<ul class="subnav fl">
-			<li><a href="#model01" class="fruit">服装配饰</a></li>
-			<li><a href="#model02" class="seafood">数码科技</a></li>
-			<li><a href="#model03" class="meet">运动代步</a></li>
-			<li><a href="#model04" class="egg">书籍文具</a></li>
-			<li><a href="#model05" class="vegetables">虚拟产品</a></li>
-			<li><a href="#model06" class="ice">其他</a></li>
-		</ul>
-		<div class="slide fl">
-			<ul class="slide_pics">
+    <div class="center_con clearfix">
+        <ul class="subnav fl">
+            <li><a href="#model01" class="fruit">服装配饰</a></li>
+            <li><a href="#model02" class="seafood">数码科技</a></li>
+            <li><a href="#model03" class="meet">运动代步</a></li>
+            <li><a href="#model04" class="egg">书籍文具</a></li>
+            <li><a href="#model05" class="vegetables">虚拟产品</a></li>
+            <li><a href="#model06" class="ice">其他</a></li>
+        </ul>
+        <div class="slide fl">
+            <ul class="slide_pics">
                 {% for ad in all_ads %}
-                    <li><img src="{{ MEDIA_URL }}{{ ad.banner_imamge }}" alt="幻灯片" title="{{ ad.banner_describe }}"></li>
+                    <li><img src="{{ MEDIA_URL }}{{ ad.banner_imamge }}" alt="幻灯片" title="{{ ad.banner_describe }}">
+                    </li>
                 {% endfor %}
-			</ul>
-			<div class="prev"></div>
-			<div class="next"></div>
-			<ul class="points"></ul>
-		</div>
-		<div class="adv fl">
-			<a href="#"><img src="{% static 'images/logo/qrcode_for_gh_1720a07a4e70_258.jpg' %}" title="关注我们,获得最新资讯" width="240" height="240"></a>
+            </ul>
+            <div class="prev"></div>
+            <div class="next"></div>
+            <ul class="points"></ul>
+        </div>
+        <div class="adv fl">
+            <a href="#"><img src="{% static 'images/logo/qrcode_for_gh_1720a07a4e70_258.jpg' %}" title="关注我们,获得最新资讯"
+                             width="240" height="240"></a>
             <div><a href="">欢迎加入我们</a></div>
-		</div>
-	</div>
+        </div>
+    </div>
 
-	<div class="list_model">
-		<div class="list_title clearfix">
-			<h3 class="fl" id="model01">服装配饰</h3>
-			<div class="subtitle fl">
-				<span>|</span>
+    <div class="list_model">
+        <div class="list_title clearfix">
+            <h3 class="fl" id="model01">服装配饰</h3>
+            <div class="subtitle fl">
+                <span>|</span>
                 {% for dress_classify in all_dress_classify %}
                     <a href="#">{{ dress_classify.name }}</a>
                 {% endfor %}
-			</div>
-			<a href="{% url 'goods:list' 'dress' %}" class="goods_more fr" id="fruit_more">查看更多 ></a>
-		</div>
+            </div>
+            <a href="{% url 'goods:list' 'costume' %}" class="goods_more fr" id="fruit_more">查看更多 ></a>
+        </div>
 
-		<div class="goods_con clearfix">
-			<div class="goods_banner fl"><img src="{% static 'images/img/nvkds.jpg' %}"></div>
-			<ul class="goods_list fl">
-                {% for dress in recommend_dress %}
+        <div class="goods_con clearfix">
+            <div class="goods_banner fl"><img src="{% static 'images/img/nvkds.jpg' %}"></div>
+            <ul class="goods_list fl">
+                {% for good in recommend_dress %}
                     <li>
-                        <h4><a href="{{ dress.goods.id }}">{{ dress.goods_name }}</a></h4>
-                        <a href="{% url 'goods:detail' %}?good_id={{ dress.id }}"><img src="{{ MEDIA_URL }}{{ dress.goods_pic }}"></a>
-                        <p style="text-align:center;">{{ dress.goods_detail }}</p>
-                        <div class="prize">¥ {{ dress.goods_price }}</div>
+                        <h4><a href="{{ good.goods.id }}">{{ good.goods_name }}</a></h4>
+                        <a href="{% url 'goods:detail' %}?good_id={{ good.id }}"><img
+                                src="{{ MEDIA_URL }}{{ good.goods_pic }}"></a>
+{#                        <p style="text-align:center;">{{ good.goods_detail }}</p>#}
+                        <div class="prize">¥ {{ good.goods_price }}</div>
                     </li>
                 {% endfor %}
 
 
-			</ul>
-		</div>
-	</div>
+            </ul>
+        </div>
+    </div>
 
-	<div class="list_model">
-		<div class="list_title clearfix">
-			<h3 class="fl" id="model02">数码科技</h3>
-			<div class="subtitle fl">
-				<span>|</span>
-				<a href="#">手机</a>
-				<a href="#">电脑</a>
-				<a href="#">相机</a>
-			</div>
-			<a href="{% url 'goods:list' 'electronics' %}" class="goods_more fr">查看更多 ></a>
-		</div>
+    <div class="list_model">
+        <div class="list_title clearfix">
+            <h3 class="fl" id="model02">数码科技</h3>
+            <div class="subtitle fl">
+                <span>|</span>
+                <a href="#">手机</a>
+                <a href="#">电脑</a>
+                <a href="#">相机</a>
+            </div>
+            <a href="{% url 'goods:list' 'electronics' %}" class="goods_more fr">查看更多 ></a>
+        </div>
 
-		<div class="goods_con clearfix">
-			<div class="goods_banner fl"><img src="{% static 'images/img/554.jpg' %}"></div>
-			<ul class="goods_list fl">
-                {% for recommend_electronic in recommend_electronics %}
-                				<li>
-					<h4><a href="#">{{ recommend_electronic.goods_detail }}</a></h4>
-					<a href="#"><img src="{{ MEDIA_URL }}{{ recommend_electronic.goods_pic }}"></a>
-					<p style="text-align:center;">{{ recommend_electronic.goods_name }}</p>
-					<div class="prize">¥ {{ recommend_electronic.goods_price }}</div>
-				</li>
+        <div class="goods_con clearfix">
+            <div class="goods_banner fl"><img src="{% static 'images/img/554.jpg' %}"></div>
+            <ul class="goods_list fl">
+                {% for good in recommend_electronics %}
+                    <li>
+                        <h4><a href="{{ good.goods.id }}">{{ good.goods_name }}</a></h4>
+                        <a href="{% url 'goods:detail' %}?good_id={{ good.id }}"><img
+                                src="{{ MEDIA_URL }}{{ good.goods_pic }}"></a>
+{#                        <p style="text-align:center;">{{ good.goods_detail }}</p>#}
+                        <div class="prize">¥ {{ good.goods_price }}</div>
+                    </li>
                 {% endfor %}
 
 
-			</ul>
-		</div>
-	</div>
+            </ul>
+        </div>
+    </div>
 
-	<div class="list_model">
-		<div class="list_title clearfix">
-			<h3 class="fl" id="model03">运动代步</h3>
-			<div class="subtitle fl">
-				<span>|</span>
-				<a href="#">器材</a>
-				<a href="#">代步</a>
-				<a href="#">组团</a>
-			</div>
-			<a href="#" class="goods_more fr">查看更多 ></a>
-		</div>
+    <div class="list_model">
+        <div class="list_title clearfix">
+            <h3 class="fl" id="model03">运动代步</h3>
+            <div class="subtitle fl">
+                <span>|</span>
+                <a href="#">器材</a>
+                <a href="#">代步</a>
+                <a href="#">组团</a>
+            </div>
+            <a href="{% url 'goods:list' 'sport' %}" class="goods_more fr">查看更多 ></a>
+        </div>
 
-		<div class="goods_con clearfix">
-			<div class="goods_banner fl"><img src="{% static 'images/img/xdfm.jpg' %}"></div>
-			<ul class="goods_list fl">
-				<li>
-					<h4><a href="#">跑步鞋</a></h4>
-					<a href="#"><img src="{% static 'images/img/xldskdko.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-				<li>
-					<h4><a href="#">户外装备</a></h4>
-					<a href="#"><img src="{% static 'images/img/xldskdko.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-				<li>
-					<h4><a href="#">体育用品</a></h4>
-					<a href="#"><img src="{% static 'images/img/xldskdko.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-				<li>
-					<h4><a href="#">出行装备</a></h4>
-					<a href="#"><img src="{% static 'images/img/xldskdko.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-			</ul>
-		</div>
-	</div>
+        <div class="goods_con clearfix">
+            <div class="goods_banner fl"><img src="{% static 'images/img/xdfm.jpg' %}"></div>
+            <ul class="goods_list fl">
+                {% for good in recommend_sports %}
+                    <li>
+                        <h4><a href="{{ good.goods.id }}">{{ good.goods_name }}</a></h4>
+                        <a href="{% url 'goods:detail' %}?good_id={{ good.id }}"><img
+                                src="{{ MEDIA_URL }}{{ good.goods_pic }}"></a>
+{#                        <p style="text-align:center;">{{ good.goods_detail }}</p>#}
+                        <div class="prize">¥ {{ good.goods_price }}</div>
+                    </li>
+                {% endfor %}
 
-	<div class="list_model">
-		<div class="list_title clearfix">
-			<h3 class="fl" id="model04">书籍文具</h3>
-			<div class="subtitle fl">
-				<span>|</span>
-				<a href="#">文学</a>
-				<a href="#">专业书籍</a>
-				<a href="#">文具</a>
-			</div>
-			<a href="#" class="goods_more fr">查看更多 ></a>
-		</div>
 
-		<div class="goods_con clearfix">
-			<div class="goods_banner fl"><img src="{% static 'images/img/sjkvji.jpg' %}"></div>
-			<ul class="goods_list fl">
-				<li>
-					<h4><a href="#">经典著作</a></h4>
-					<a href="#"><img src="{% static 'images/img/sjcpofk.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-				<li>
-					<h4><a href="#">中国文学</a></h4>
-					<a href="#"><img src="{% static 'images/img/sjkj.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-				<li>
-					<h4><a href="#">历史</a></h4>
-					<a href="#"><img src="{% static 'images/img/sjdcfpok.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-				<li>
-					<h4><a href="#">文具</a></h4>
-					<a href="#"><img src="{% static 'images/img/sjgouxue.png' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-			</ul>
-		</div>
-	</div>
+            </ul>
+        </div>
+    </div>
 
-	<div class="list_model">
-		<div class="list_title clearfix">
-			<h3 class="fl" id="model05">虚拟产品</h3>
-			<div class="subtitle fl">
-				<span>|</span>
-				<a href="#">旧书捐赠</a>
-				<a href="#">衣服捐赠</a>
-				<a href="#">公益活动</a>
-				<a href="#">志愿团队</a>
-			</div>
-			<a href="#" class="goods_more fr">查看更多 ></a>
-		</div>
+    <div class="list_model">
+        <div class="list_title clearfix">
+            <h3 class="fl" id="model04">书籍文具</h3>
+            <div class="subtitle fl">
+                <span>|</span>
+                <a href="#">文学</a>
+                <a href="#">专业书籍</a>
+                <a href="#">文具</a>
+            </div>
+            <a href="{% url 'goods:list' 'stationery' %}" class="goods_more fr">查看更多 ></a>
+        </div>
 
-		<div class="goods_con clearfix">
-			<div class="goods_banner fl"><img src="{% static 'images/img/gymdovk0.jpg' %}"></div>
-			<ul class="goods_list fl">
-				<li>
-					<h4><a href="#">公益活动</a></h4>
-					<a href="#"><img src="{% static 'images/img/gymojgglgp.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-				<li>
-					<h4><a href="#">校内公益</a></h4>
-					<a href="#"><img src="{% static 'images/img/gy15sa.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-				<li>
-					<h4><a href="#">公益捐赠</a></h4>
-					<a href="#"><img src="{% static 'images/img/gydkioj.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-				<li>
-					<h4><a href="#">志愿者</a></h4>
-					<a href="#"><img src="{% static 'images/img/gyjkdhfia.png' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-			</ul>
-		</div>
-	</div>
+        <div class="goods_con clearfix">
+            <div class="goods_banner fl"><img src="{% static 'images/img/sjkvji.jpg' %}"></div>
+            <ul class="goods_list fl">
+                {% for good in recommend_stationery %}
+                    <li>
+                        <h4><a href="{{ good.goods.id }}">{{ good.goods_name }}</a></h4>
+                        <a href="{% url 'goods:detail' %}?good_id={{ good.id }}"><img
+                                src="{{ MEDIA_URL }}{{ good.goods_pic }}"></a>
+{#                        <p style="text-align:center;">{{ good.goods_detail }}</p>#}
+                        <div class="prize">¥ {{ good.goods_price }}</div>
+                    </li>
+                {% endfor %}
 
-	<div class="list_model">
-		<div class="list_title clearfix">
-			<h3 class="fl" id="model06">其他</h3>
-			<div class="subtitle fl">
-				<span>|</span>
-				<a href="#">日用品</a>
-				<a href="#">租服务</a>
-				<a href="#">技能服务</a>
-			</div>
-			<a href="#" class="goods_more fr">查看更多 ></a>
-		</div>
 
-		<div class="goods_con clearfix">
-			<div class="goods_banner fl"><img src="{% static 'images/img/yyytp.jpg' %}"></div>
-			<ul class="goods_list fl">
-				<li>
-					<h4><a href="#">家具</a></h4>
-					<a href="#"><img src="{% static 'images/img/jjtp.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-				<li>
-					<h4><a href="#">种植</a></h4>
-					<a href="#"><img src="{% static 'images/img/zwtp.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-				<li>
-					<h4><a href="#">宠物用品</a></h4>
-					<a href="#"><img src="{% static 'images/img/cwyptp.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-				<li>
-					<h4><a href="#">游戏交易</a></h4>
-					<a href="#"><img src="{% static 'images/img/yxtp.jpg' %}"></a>
-					<p style="text-align:center;">说明</p>
-					<div class="prize">¥ 38.00</div>
-				</li>
-			</ul>
-		</div>
-	</div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="list_model">
+        <div class="list_title clearfix">
+            <h3 class="fl" id="model05">虚拟产品</h3>
+            <div class="subtitle fl">
+                <span>|</span>
+                <a href="#">日用品</a>
+                <a href="#">租服务</a>
+                <a href="#">技能服务</a>
+            </div>
+            <a href="{% url 'goods:list' 'game' %}" class="goods_more fr">查看更多 ></a>
+        </div>
+
+        <div class="goods_con clearfix">
+            <div class="goods_banner fl"><img src="{% static 'images/img/yyytp.jpg' %}"></div>
+            <ul class="goods_list fl">
+                {% for good in recommend_game %}
+                    <li>
+                        <h4><a href="{{ good.goods.id }}">{{ good.goods_name }}</a></h4>
+                        <a href="{% url 'goods:detail' %}?good_id={{ good.id }}"><img
+                                src="{{ MEDIA_URL }}{{ good.goods_pic }}"></a>
+{#                        <p style="text-align:center;">{{ good.goods_detail }}</p>#}
+                        <div class="prize">¥ {{ good.goods_price }}</div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="list_model">
+        <div class="list_title clearfix">
+            <h3 class="fl" id="model06">其他</h3>
+            <div class="subtitle fl">
+                <span>|</span>
+                <a href="#">旧书捐赠</a>
+                <a href="#">衣服捐赠</a>
+                <a href="#">公益活动</a>
+                <a href="#">志愿团队</a>
+            </div>
+
+            <a href="{% url 'goods:list' 'other' %}" class="goods_more fr">查看更多 ></a>
+        </div>
+
+        <div class="goods_con clearfix">
+            <div class="goods_banner fl"><img src="{% static 'images/img/gymdovk0.jpg' %}"></div>
+            <ul class="goods_list fl">
+                {% for good in recommend_other %}
+                    <li>
+                        <h4><a href="{{ good.goods.id }}">{{ good.goods_name }}</a></h4>
+                        <a href="{% url 'goods:detail' %}?good_id={{ good.id }}"><img
+                                src="{{ MEDIA_URL }}{{ good.goods_pic }}"></a>
+{#                        <p style="text-align:center;">{{ good.goods_detail }}</p>#}
+                        <div class="prize">¥ {{ good.goods_price }}</div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 
 
 
-	<!--右侧悬浮菜单-->
-	<div class="guide">
-		<div class="guide-wrap">
-			<a href="#" class="edit" title="常见问题"><span>常见问题</span></a>
-			<a href="#" class="find" title="购物车"><span>购物车</span></a>
-			<a href="#" class="report" title="在线咨询"><span>在线咨询</span></a>
-			<a href="javascript:window.scrollTo(0,0)" class="top" title="回顶部"><span>回顶部</span></a>
-		</div>
-	</div>
+    <!--右侧悬浮菜单-->
+    <div class="guide">
+        <div class="guide-wrap">
+            <a href="#" class="edit" title="常见问题"><span>常见问题</span></a>
+            <a href="{% url 'user:cart' %}" class="find" title="购物车"><span>购物车</span></a>
+            <a href="#" class="report" title="在线咨询"><span>在线咨询</span></a>
+            <a href="javascript:window.scrollTo(0,0)" class="top" title="回顶部"><span>回顶部</span></a>
+        </div>
+    </div>
 
-{% block js %}
-    <script type="text/javascript" src="{% static 'js/jquery-ui.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/slide.js' %}"></script>
-    <script type="text/javascript">
-        BCSlideshow('focuspic');
-        var oFruit = document.getElementById('fruit_more');
-        var oShownum = document.getElementById('show_count');
+    {% block js %}
+        <script type="text/javascript" src="{% static 'js/jquery-ui.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/slide.js' %}"></script>
+        <script type="text/javascript">
+            BCSlideshow('focuspic');
+            var oFruit = document.getElementById('fruit_more');
+            var oShownum = document.getElementById('show_count');
 
-        var hasorder = localStorage.getItem('order_finish');
+            var hasorder = localStorage.getItem('order_finish');
 
-        if(hasorder)
-        {
-            oShownum.innerHTML = '2';
-        }
+            if (hasorder) {
+                oShownum.innerHTML = '2';
+            }
 
-        oFruit.onclick = function(){
-            window.location.href = 'list.html';
-        }
-    </script>
+            oFruit.onclick = function () {
+                window.location.href = 'list.html';
+            }
+        </script>
 
-    <script>
-        function is_login() {
-            alert('亲，您还没有登录哦。为了更好的用户体验,还请您登陆哦.');
-        }
-        {% if not request.session.is_login %}
-            is_login();
-        {% endif %}
-    </script>
-{% endblock %}
+        <script>
+            function is_login() {
+                alert('亲，您还没有登录哦。为了更好的用户体验,还请您登陆哦.');
+            }
+            {% if not request.session.is_login %}
+                is_login();
+            {% endif %}
+        </script>
+    {% endblock %}
 
 {% endblock %}
 
