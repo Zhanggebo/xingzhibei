@@ -53,9 +53,20 @@ class Detail(View):
 class List(View):
 
     def get(self, request, classify):
+
         # all_goods = GoodsCategory.objects.filter(code=classify).sub_cat.all()
         all_goods = GoodsInfo.objects.filter(goods_type=classify)
+
+        #商品排序
+        sort = request.GET.get('sort',"")
+        if sort:
+            if sort == "goods_price":
+                all_goods = all_goods.order_by("-goods_price")
+            elif sort == "goods_click":
+                all_goods = all_goods.order_by("-goods_click")
+
         print(all_goods)
         return render(request, 'list.html',{
             'all_goods':all_goods,
+            'sort':sort,  #商品排序增加的
         })

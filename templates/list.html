@@ -83,9 +83,11 @@
 
 		<div class="r_wrap fr clearfix">
 			<div class="sort_bar">
-				<a href="#" class="active">默认</a>
-				<a href="#">价格</a>
-				<a href="#">人气</a>
+
+				<a href="#" class="{% if sort == '' %}active{% endif %}">默认</a>
+				<a href="?sort=goods_price" class="{% if sort == 'goods_price' %}active{% endif %}">价格</a> <!--2019/7/31-->
+				<a href="?sort=goods_click" class="{% if sort == 'goods_click' %}active{% endif %}">人气</a>     <!--2019/7/31-->
+
 			</div>
 
 			<ul class="goods_type_list clearfix">
