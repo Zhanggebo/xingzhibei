@@ -44,7 +44,7 @@ class Detail(View):
     def get(self, request):
         good_id = request.GET.get('good_id', '')
         good = GoodsInfo.objects.get(id=good_id)
-        good.goods_click += 1        #点击商品人气+1   改的时间  8/1
+        good.goods_click += 1        #点击商品人气+1
         good.save()
 
         return render(request, 'detail.html', {
