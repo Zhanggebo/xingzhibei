@@ -44,6 +44,8 @@ class Detail(View):
     def get(self, request):
         good_id = request.GET.get('good_id', '')
         good = GoodsInfo.objects.get(id=good_id)
+        good.goods_click += 1        #点击商品人气+1   改的时间  8/1
+        good.save()
 
         return render(request, 'detail.html', {
             'good': good
@@ -57,13 +59,14 @@ class List(View):
         # all_goods = GoodsCategory.objects.filter(code=classify).sub_cat.all()
         all_goods = GoodsInfo.objects.filter(goods_type=classify)
 
+
         #商品排序
         sort = request.GET.get('sort',"")
         if sort:
             if sort == "goods_price":
-                all_goods = all_goods.order_by("-goods_price")
+                all_goods = all_goods.order_by("-goods_price")  #价格排序
             elif sort == "goods_click":
-                all_goods = all_goods.order_by("-goods_click")
+                all_goods = all_goods.order_by("-goods_click")  #人气排序
 
         print(all_goods)
         return render(request, 'list.html',{
