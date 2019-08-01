@@ -13,6 +13,8 @@ if sort:
     elif sort == "goods_click":
         all_goods = all_goods.order_by("-goods_click")
 ```
+2019/8/1
+>商品点击+1
 
 
 
