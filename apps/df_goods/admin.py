@@ -24,3 +24,9 @@ class GoodsInfoAdmin(ImportExportModelAdmin):
     list_per_page = 15
     list_display = ['id', 'goods_name', 'goods_old_price', 'goods_price', 'goods_type', 'goods_click', 'is_recommend',
                     'isDelete']
+
+
+@admin.register(GoodComment)
+class GoodCommentAdmin(ImportExportModelAdmin):
+    list_per_page = 15
+    list_display = ['content', 'add_time']

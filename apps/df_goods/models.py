@@ -54,7 +54,6 @@ class GoodsCategoryBrand(models.Model):
     def __str__(self):
         return self.name
 
-
 # 商品信息
 class GoodsInfo(models.Model):
     DEGREE = (
@@ -96,3 +95,16 @@ class GoodsInfo(models.Model):
 
     def __str__(self):
         return self.goods_name
+
+
+# 商品评论
+class GoodComment(models.Model):
+    content = models.TextField(verbose_name='评论内容')
+    add_time = models.DateTimeField(auto_now_add=True, verbose_name='评论添加时间')
+
+    class Meta:
+        verbose_name = '商品评论'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.content
