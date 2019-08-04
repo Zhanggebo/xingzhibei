@@ -3,7 +3,7 @@ from django.views.generic import View
 
 from apps.ad.models import Ad
 from apps.df_goods.models import GoodsCategory, GoodsInfo
-
+from pure_pagination import PageNotAnInteger,Paginator,EmptyPage
 
 # Create your views here.
 
@@ -39,17 +39,27 @@ class Index(View):
             'recommend_other':recommend_other,
         })
 
+
 # 商品详情页
 class Detail(View):
     def get(self, request):
-        good_id = request.GET.get('good_id', '')
+        good_id = request.GET.get('good_id','')
         good = GoodsInfo.objects.get(id=good_id)
+
+        good_type = good.goods_type  #取出类型
+        good_type = GoodsInfo.objects.filter(goods_type=good_type)[:3]  #按类型查找
+
         good.goods_click += 1        #点击商品人气+1
         good.save()
 
+
         return render(request, 'detail.html', {
-            'good': good
+            'good': good,
+            'good_ty':good_type
         })
+
+
+
 
 # 商品列表页
 class List(View):
@@ -59,7 +69,6 @@ class List(View):
         # all_goods = GoodsCategory.objects.filter(code=classify).sub_cat.all()
         all_goods = GoodsInfo.objects.filter(goods_type=classify)
 
-
         #商品排序
         sort = request.GET.get('sort',"")
         if sort:
@@ -68,8 +77,23 @@ class List(View):
             elif sort == "goods_click":
                 all_goods = all_goods.order_by("-goods_click")  #人气排序
 
-        print(all_goods)
+        all_good_s = all_goods.order_by("-add_time")  # 日期排序
+
+
+        #分页
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+        #每页显示数量
+        p = Paginator(all_goods, 5)
+        all_goods = p.page(page)
+
         return render(request, 'list.html',{
             'all_goods':all_goods,
             'sort':sort,  #商品排序增加的
+            'all_good_s':all_good_s,
+
         })
+
+

@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'tinymce',
     # 后台导入导出
     'import_export',
+    #分页
+    'pure_pagination',
 
 ]
 
@@ -155,3 +157,14 @@ SESSION_SAVE_EVERY_REQUEST = True
 
 # 配置后台logo
 SIMPLEUI_LOGO = 'https://tse1-mm.cn.bing.net/th?id=OIP.CBDn9VJAXW5YcmKQgfySwQHaFj&w=238&h=177&c=7&o=5&pid=1.7'
+
+
+# 分页
+PAGINATION_SETTINGS = {
+    'PAGE_RANGE_DISPLAYED': 10,
+    # 显示当前页面的相邻的页面数
+    'MARGIN_PAGES_DISPLAYED': 2,
+    # 显示的第一页和最后一页相邻的页数
+    'SHOW_FIRST_PAGE_WHEN_INVALID': True,
+    # 无效页面时，显示第一页而不是404页面
+}

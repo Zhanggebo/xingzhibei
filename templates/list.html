@@ -49,34 +49,18 @@
 			<div class="new_goods">
 				<h3>新品推荐</h3>
 				<ul>
+                    {% for new_good in all_good_s %}
 					<li>
 
-						<a href="#"><img src={% static 'images/goods/1.jpg' %}></a>
-						<h4><a href="#">天然草莓晶手链女韩版双层石榴石简约学生个性森系闺蜜清新礼物女</a></h4>
-						<div class="prize">￥3.90</div>
+						<a href="{% url 'goods:detail' %}?good_id={{ new_good.id }}"><img src="{{ MEDIA_URL }}{{ new_good.goods_pic }}"></a>
+						<h4><a href="{% url 'goods:detail' %}?good_id={{ new_good.id }}">{{ new_good.goods_name }}</a></h4>
+						<div class="prize">{{ new_good.goods_price }}</div>
 						<div class="operate">
 							<a href="cart.html" class="add_goods" title="加入购物车"></a>
 							</div>
 					</li>
-					<li>
+                    {% endfor %}
 
-					<a href="#"><img src={% static 'images/goods/2.jpg' %}></a>
-					<h4><a href="#">蛋糕连衣裙</a></h4>
-					<div class="prize">¥ 30.00</div>
-					<div class="operate">
-							<a href="cart.html" class="add_goods" title="加入购物车"></a>
-							</div>
-				</li>
-					<li>
-
-						<a href="#"><img src={% static 'images/goods/3.jpg' %}></a>
-						<h4><a href="#">电动榨汁杯</a></h4>
-						<div class="prize">￥16.80</div>
-						<div class="operate">
-							<a href="cart.html" class="add_goods" title="加入购物车"></a>
-							</div>
-
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -91,7 +75,7 @@
 			</div>
 
 			<ul class="goods_type_list clearfix">
-                {% for good in all_goods %}
+                {% for good in all_goods.object_list %}
                 				<li>
 					<a href="{% url 'goods:detail' %}?good_id={{ good.id }}"><img src="{{ MEDIA_URL }}{{ good.goods_pic }}"></a>
 					<h4><a href="{% url 'goods:detail' %}?good_id={{ good.id }}">{{ good.goods_name }}</a></h4>
@@ -107,13 +91,25 @@
 			</ul>
 
 			<div class="pagenation">
-				<a href="#"><上一页</a>
-				<a href="#" class="active">1</a>
-				<a href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>
-				<a href="#">下一页></a>
+                 {% if all_goods.has_previous %}
+                        <a href="?{{ all_goods.previous_page_number.querystring }}" class="prev">上一页</a>
+                 {% endif %}
+                {% for page in all_goods.pages %}
+                    {% if page %}
+                        {% ifequal page all_goods.number %}
+                            <a href="?{{ page.querystring }}" class="active">{{ page }}</a>
+                        {% else %}
+                            <a href="?{{ page.querystring }}" class="page">{{ page }}</a>
+                        {% endifequal %}
+                    {% else %}
+                        <a href="none" class="">...</a>
+                    {% endif %}
+                {% endfor %}
+                {% if all_goods.has_next %}
+                    <a href="?{{ all_goods.next_page_number.querystring }}" class="next"> 下一页</a>
+
+                {% endif %}
+
 			</div>
 		</div>
 	</div>

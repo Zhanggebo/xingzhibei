@@ -77,16 +77,23 @@
 			<div class="new_goods">
 				<h3>闲置宝贝推荐</h3>
 				<ul>
-					<li>
-						<a href="#"><img src={% static 'images/goods/goods001.jpg' %}></a>
-						<h4><a href="#">运动耳机</a></h4>
-						<div class="prize">￥80</div>
+                    {% for good_x in good_ty %}
+                        <li>
+						<a href="{% url 'goods:detail' %}?good_id={{ good_x.id }}"><img src="{{ MEDIA_URL }}{{ good_x.goods_pic }}"></a>
+						<h4><a href="{% url 'goods:detail' %}?good_id={{ good_x.id }}">{{ good_x.goods_type }}</a></h4>
+						<div class="prize">{{ good_x.goods_price }}</div>
 					</li>
-					<li>
-						<a href="#"><img src={% static 'images/goods/goods002.jpg' %}></a>
-						<h4><a href="#">英语四级资料</a></h4>
-						<div class="prize">￥55</div>
-					</li>
+                    {% endfor %}
+{#					<li>#}
+{#						<a href="#"><img src={% static 'images/goods/goods001.jpg' %}></a>#}
+{#						<h4><a href="#">运动耳机</a></h4>#}
+{#						<div class="prize">￥80</div>#}
+{#					</li>#}
+{#					<li>#}
+{#						<a href="#"><img src={% static 'images/goods/goods002.jpg' %}></a>#}
+{#						<h4><a href="#">英语四级资料</a></h4>#}
+{#						<div class="prize">￥55</div>#}
+{#					</li>#}
 				</ul>
 			</div>
 		</div>
