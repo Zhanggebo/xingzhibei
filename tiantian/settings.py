@@ -30,7 +30,7 @@ SECRET_KEY = '6g@!$bx(m2ckan%9xndyh2@yk+wkpwr%7a&nl$i_tz5^!xcea2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['241fb15292.zicp.vip']
 
 # AUTHENTICATION_BACKENDS = (
 #     'apps.df_user.AuthBackend' ,

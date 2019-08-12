@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 class UserConfig(AppConfig):
-    # name = '用户'
+    name = 'apps.df_user'
     verbose_name = '用户'
