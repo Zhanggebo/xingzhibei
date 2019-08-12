@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import College, UserProfile
+from .models import *
 # Register your models here.
 
 
@@ -11,4 +11,5 @@ class CollegeAdmin(admin.ModelAdmin):
 
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ['id','user_sno', 'user_name', 'add_time']
+    list_display = ['user_name', 'user_sno', 'add_time']
+

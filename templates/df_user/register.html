@@ -12,7 +12,7 @@
 <body>
 	<div class="register_con">
 		<div class="l_con fl">
-			<a class="reg_logo"><img src="{% static 'images/logo02.png' %}"></a>
+			<a href="{% url 'goods:index' %}" class="reg_logo"><img src="{% static 'images/logo02.png' %}"></a>
 			<div class="reg_slogan">足不出户  ·  蹦跶每一天</div>
 			<div class="reg_banner"></div>
 		</div>
@@ -26,6 +26,12 @@
 				<form action="{% url 'user:register' %}" method="post">
 				<ul>
 					<li>
+						<label for="user_name">用户名:</label>
+						<input type="text" name="user" id="user_name" placeholder="请输入您的用户名">
+						<span class="error_tip">提示信息</span>
+
+					</li>
+                    <li>
 						<label for="user_name">学号:</label>
 						<input type="text" name="user_name" id="user_name" placeholder="请输入您的真实学号">
 						<span class="error_tip">提示信息</span>

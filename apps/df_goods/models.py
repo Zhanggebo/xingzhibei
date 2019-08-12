@@ -72,11 +72,28 @@ class GoodsInfo(models.Model):
         ('game','虚拟产品'),
         ('other','其他'),
     )
+    goods_introduce_default = """
+<h1>卖家姓名：XXX</h1>
+
+<h1>卖家所在宿舍：XXX</h1>
+
+<h1>卖家联系方式：</h1>
+
+    <h1>QQ：</h1>
+
+    <h1>微信：</h1>
+
+    <h1>手机号：</h1>
+
+    
+    
+    
+    """
     goods_pic = models.ImageField(upload_to='goods/%Y/%m', blank=True, verbose_name='商品图片')
     goods_name = models.CharField(max_length=30, verbose_name='商品名称')
     goods_detail = models.CharField(max_length=200, verbose_name='商品描述')
     goods_degree = models.CharField(verbose_name='商品新旧程度', choices=DEGREE, max_length=16)
-    goods_introduce = HTMLField(verbose_name='商品介绍页')
+    goods_introduce = HTMLField(verbose_name='商品介绍页', default=goods_introduce_default)
     goods_old_price = models.DecimalField(max_digits=5, decimal_places=2, verbose_name='商品原价(￥)', default=100)
     goods_price = models.DecimalField(max_digits=5, decimal_places=2, verbose_name='商品价格(￥)')
     goods_click = models.IntegerField(verbose_name='商品人气', default=0)

@@ -67,7 +67,10 @@ class List(View):
     def get(self, request, classify):
 
         # all_goods = GoodsCategory.objects.filter(code=classify).sub_cat.all()
-        all_goods = GoodsInfo.objects.filter(goods_type=classify)
+        if classify == 'all':
+            all_goods = GoodsInfo.objects.all()
+        else:
+            all_goods = GoodsInfo.objects.filter(goods_type=classify)
 
         #商品排序
         sort = request.GET.get('sort',"")

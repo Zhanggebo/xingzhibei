@@ -16,7 +16,7 @@
             <ul class="navlist fl">
                 <li><a href="{% url 'goods:index' %}">首页</a></li>
                 <li class="interval">|</li>
-                <li><a href="">商城</a></li>
+                <li><a href="{% url 'goods:list' 'all' %}">商城</a></li>
                 <li class="interval">|</li>
                 <li><a href="">求购商城</a></li>
                 <li class="interval">|</li>
@@ -71,8 +71,8 @@
             <ul class="goods_list fl">
                 {% for good in recommend_dress %}
                     <li>
-                        <h4><a href="{{ good.goods.id }}">{{ good.goods_name }}</a></h4>
-                        <a href="{% url 'goods:detail' %}?good_id={{ good.id }}"><img
+                        <h4><a href="{{ good.goods.id }}" target="_blank">{{ good.goods_name }}</a></h4>
+                        <a href="{% url 'goods:detail' %}?good_id={{ good.id }}" target="_blank"><img
                                 src="{{ MEDIA_URL }}{{ good.goods_pic }}"></a>
 {#                        <p style="text-align:center;">{{ good.goods_detail }}</p>#}
                         <div class="prize">¥ {{ good.goods_price }}</div>

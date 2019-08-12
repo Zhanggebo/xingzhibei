@@ -1,6 +1,7 @@
 from django.shortcuts import render,HttpResponse,redirect
 from django.views.generic import View
 from django.contrib.auth.hashers import make_password
+from django.contrib.auth import get_user_model
 from django.http import JsonResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 
@@ -25,21 +26,20 @@ class Register(View):
         user_cpwd =request.POST.get('cpwd')
         user_mail =request.POST.get('email')
 
-
         # 判断用户是否存在
         if  UserProfile.objects.filter(user_sno=user_sno):
-            msg = '用户名已经存在'
+            msg = '<h1>用户名已经存在</h1>'
             return HttpResponse(msg)
         # 判断两次密码
         if user_pwd=='' or user_pwd!=user_cpwd:
-            msg = '两次密码不一致'
+            msg = '<h1>两次密码不一致</h1>'
             return HttpResponse(msg)
         # 判断邮箱是否正确
         from django.core.validators import validate_email
         try:
             validate_email(user_mail)
         except:
-            msg = '请输入正确邮箱,后期激活,找回密码会用到'
+            msg = '<h1>请输入正确邮箱</h1>'
             return HttpResponse(msg)
 
 
