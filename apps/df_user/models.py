@@ -35,3 +35,7 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user_sno
+
+
+class UserFavorite(models.Model):
+    pass
