@@ -30,7 +30,7 @@ SECRET_KEY = '6g@!$bx(m2ckan%9xndyh2@yk+wkpwr%7a&nl$i_tz5^!xcea2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['241fb15292.zicp.vip']
+ALLOWED_HOSTS = ['*']
 
 # AUTHENTICATION_BACKENDS = (
 #     'apps.df_user.AuthBackend' ,
@@ -48,15 +48,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # apps
-    'apps.df_user',
-    'apps.df_goods',
     'apps.ad',
+    'apps.df_goods',
+    'apps.df_user',
 
     # 富文本编辑器
     'tinymce',
     # 后台导入导出
     'import_export',
-    #分页
+    # 分页
     'pure_pagination',
 
 ]
@@ -92,7 +92,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'tiantian.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
@@ -102,7 +101,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -122,7 +120,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
@@ -136,32 +133,26 @@ USE_L10N = True
 
 USE_TZ = False
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
-
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # 设置session过期时间为30分钟
-SESSION_COOKIE_AGE = 600*30
+SESSION_COOKIE_AGE = 600 * 30
 # 当浏览器被关闭的时候将session失效，但是不能删除数据库的session数据
 # SESSION_EXPIRE_AT_BROWSER_CLOSE =  True
 # 每次请求都要保存一下session
 SESSION_SAVE_EVERY_REQUEST = True
 
-
-
-
 # SimpleSetting
 
 # 配置后台logo
 SIMPLEUI_LOGO = 'https://tse1-mm.cn.bing.net/th?id=OIP.CBDn9VJAXW5YcmKQgfySwQHaFj&w=238&h=177&c=7&o=5&pid=1.7'
-
 
 # 分页
 PAGINATION_SETTINGS = {
