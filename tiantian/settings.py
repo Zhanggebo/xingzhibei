@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'apps.ad',
     'apps.df_goods',
     'apps.df_user',
+    'haystack',#全文检索
 
     # 富文本编辑器
     'tinymce',
@@ -163,3 +164,14 @@ PAGINATION_SETTINGS = {
     'SHOW_FIRST_PAGE_WHEN_INVALID': True,
     # 无效页面时，显示第一页而不是404页面
 }
+
+
+#全文检索配置
+HAYSTACK_CONNECTIONS = {
+    'default':{
+        'ENGINE':'haystack.backends.whoosh_cn_backend.WhooshEngine',
+        'PATH':os.path.join(BASE_DIR, 'whoosh_index'),
+    }
+}
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 1  #搜索显示商品每页商品个数
