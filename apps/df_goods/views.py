@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.shortcuts import render
 from django.views.generic import View
 
@@ -26,7 +27,6 @@ class Index(View):
         recommend_other = all_goods.filter(goods_type='other', is_recommend=True)[:4]
 
 
-
         return render(request, 'index.html', {
             'all_ads': all_ads,
             'all_dress_classify': all_dress_classify,
@@ -37,6 +37,7 @@ class Index(View):
             'recommend_stationery':recommend_stationery,
             'recommend_game':recommend_game,
             'recommend_other':recommend_other,
+
         })
 
 
@@ -71,6 +72,8 @@ class List(View):
             all_goods = GoodsInfo.objects.all()
         else:
             all_goods = GoodsInfo.objects.filter(goods_type=classify)
+
+
 
         #商品排序
         sort = request.GET.get('sort',"")
