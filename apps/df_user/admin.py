@@ -13,3 +13,9 @@ class CollegeAdmin(admin.ModelAdmin):
 class UserProfileAdmin(admin.ModelAdmin):
     list_display = ['user_name', 'user_sno', 'add_time']
 
+
+@admin.register(UserFavorite)
+class UserFavoriteAdmin(admin.ModelAdmin):
+    readonly_fields = ('imamge_url',)
+    list_display = ['user', 'imamge_url']
+

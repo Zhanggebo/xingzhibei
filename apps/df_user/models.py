@@ -1,7 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.models import User
+from django.utils.html import format_html
 
+from apps.df_goods.models import GoodsInfo
 # Create your models here.
 
 # 学院
@@ -38,4 +40,16 @@ class UserProfile(models.Model):
 
 
 class UserFavorite(models.Model):
-    pass
+    user = models.ForeignKey(UserProfile, blank=True, verbose_name='用户', on_delete=models.CASCADE, null=True)
+    good = models.ForeignKey(GoodsInfo, blank=True, verbose_name='商品', on_delete=models.CASCADE, null=True)
+
+    def imamge_url(self):
+        return format_html( '<img src="{0}" width="100px"/>', self.good.goods_pic.url)
+    imamge_url.short_description = '产品图片'
+
+    class Meta:
+        verbose_name = '用户收藏'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.user.__str__()

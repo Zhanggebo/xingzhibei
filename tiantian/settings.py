@@ -152,7 +152,7 @@ SESSION_SAVE_EVERY_REQUEST = True
 # SimpleSetting
 
 # 配置后台logo
-SIMPLEUI_LOGO = 'https://tse1-mm.cn.bing.net/th?id=OIP.CBDn9VJAXW5YcmKQgfySwQHaFj&w=238&h=177&c=7&o=5&pid=1.7'
+SIMPLEUI_LOGO = '/static/images/logo_back.jpg'
 
 # 分页
 PAGINATION_SETTINGS = {
