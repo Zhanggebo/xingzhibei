@@ -132,8 +132,12 @@ class Cart(View):
         # 添加收藏商品
         user_id = request.session.get('user_id')
         good_id = request.POST.get('good_id')
-        print(user_id)
-        print(good_id)
+
+# 下一步判断用户是否已经添加过
+#         user_sno  = request.session.get('user_sno')
+#         is_in_good = UserFavorite.objects.filter(user__user_sno=user_sno, good__goods_id=good_id    )
+#         print(is_in_good.good)
+
         user_fav = UserFavorite()
         user_fav.user_id = user_id
         user_fav.good_id = good_id

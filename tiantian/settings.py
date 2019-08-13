@@ -167,11 +167,20 @@ PAGINATION_SETTINGS = {
 
 
 #全文检索配置
+# HAYSTACK_CONNECTIONS = {
+#     'default':{
+#         'ENGINE':'haystack.backends.whoosh_cn_backend.WhooshEngine',
+#         'PATH':os.path.join(BASE_DIR, 'whoosh_index'),
+#     }
+# }
+
 HAYSTACK_CONNECTIONS = {
-    'default':{
-        'ENGINE':'haystack.backends.whoosh_cn_backend.WhooshEngine',
-        'PATH':os.path.join(BASE_DIR, 'whoosh_index'),
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
     }
 }
+
+
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 1  #搜索显示商品每页商品个数

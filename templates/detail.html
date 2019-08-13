@@ -128,26 +128,7 @@
     </div>
 
     {% block js %}
-        <script>
-            $("#add_cart").click(function () {
 
-                var good_id = $("#good_id").text();
-                $.ajax({
-                    url: "{% url 'user:cart' %}",
-                    type: "post",
-                    data: {
-                        'csrfmiddlewaretoken': '{{ csrf_token }}',
-                        {#用户信息#}
-                        'good_id': good_id
-                    },
-                    success: function (date) {
-                        alert('修改成功');
-                        {#window.location.reload();#}
-                    }
-
-                })
-            })
-        </script>
         <script type="text/javascript" src="{% static 'js/slide.js' %}"></script>
         <script type="text/javascript">
             BCSlideshow('focuspic');
@@ -164,8 +145,7 @@
                 window.location.href = 'list.html';
             }
         </script>
-
-        <script type="text/javascript">
+        <script>
             var $add_x = $('#add_cart').offset().top;
             var $add_y = $('#add_cart').offset().left;
 
@@ -188,7 +168,25 @@
             })
         </script>
 
+        <script>
+            $("#add_cart").click(function () {
 
+                var good_id = $("#good_id").text();
+                $.ajax({
+                    url: "{% url 'user:cart' %}",
+                    type: "post",
+                    data: {
+                        'csrfmiddlewaretoken': '{{ csrf_token }}',
+                        {#用户信息#}
+                        'good_id': good_id
+                    },
+                    success: function (date) {
+                        {#window.location.reload();#}
+                    }
+
+                })
+            })
+        </script>
 
 
     {% endblock %}
