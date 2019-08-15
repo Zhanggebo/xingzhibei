@@ -45,8 +45,8 @@
 	<div class="search_bar clearfix">
 		<a href="{% url 'goods:index' %}" class="logo fl"><img src="{% static 'images/logo.png' %}"></a>
 		<div class="search_con fl" >
-            <form method="get" action="/search">
-			        <input type="text" class="input_text fl" name="q" placeholder="搜索商品">
+            <form method="get" action="{% url 'goods:search' %} " >
+			        <input type="text" name="keyboard" id="keyboard" class="input_text"   value="请输入商品名称">
 			        <input type="submit" class="input_btn fr" name="" value="搜索">
             </form>
 		</div>
@@ -66,8 +66,28 @@
 
 {% include 'base_foot.html' %}
 
-
-
+{# {% block js %}#}
+{#     <script type="text/javascript">#}
+{#     $(function() {#}
+{#       $('#jsSearchBtn').on('click',function(){#}
+{#        search_click()#}
+{#    });#}
+{##}
+{#     }#}
+{#    function search_click(){#}
+{#    var keywords = $('#search_keywords').val(),#}
+{#        request_url = '';#}
+{#    if(keywords == ""){#}
+{#        return#}
+{#    }#}
+{#    if(type == "search"){#}
+{#        request_url = "/search?keywords="+keywords#}
+{##}
+{#    window.location.href = request_url#}
+{#}#}
+{#</script>#}
+{##}
+{#{% endblock %}#}
 
 </body>
 </html>

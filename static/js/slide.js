@@ -128,3 +128,10 @@ $(function(){
 
 	}
 });
+
+
+jQuery(document).ready(function ($) {
+	$('#keyboard').mouseover(function () {
+        showMessage('输入你想搜索的关键词再按Enter(回车)键就可以搜索啦!');
+    });
+}

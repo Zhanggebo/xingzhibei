@@ -1,4 +1,0 @@
-#建立索引数据
-{{ object.goods_name }} #商品名称
-{{ object.goods_detail }} #商品描述
-{{ object.goods_introduce }}  #商品介绍

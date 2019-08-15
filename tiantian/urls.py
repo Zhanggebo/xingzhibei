@@ -32,5 +32,5 @@ urlpatterns = [
 
     # 富文本编辑器url
     path('tinymce/', include('tinymce.urls')),
-    path('search',include('haystack.urls')) #全文检索
+
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

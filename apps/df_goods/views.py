@@ -1,4 +1,5 @@
 from django.db.models import Q
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic import View
 
@@ -73,8 +74,6 @@ class List(View):
         else:
             all_goods = GoodsInfo.objects.filter(goods_type=classify)
 
-
-
         #商品排序
         sort = request.GET.get('sort',"")
         if sort:
@@ -103,3 +102,20 @@ class List(View):
         })
 
 
+# 搜索
+class Search(View):
+    def get(self, request):
+
+        keyboard = request.GET.get('keyboard','')
+        search_goods = GoodsInfo.objects.all()
+        if keyboard:
+            search_goods = search_goods.filter(Q(goods_name__contains=keyboard) )
+        # 前期分页没弄好 放在后期
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+        # 每页显示数量
+        p = Paginator(search_goods, 100)
+        search_goods = p.page(page)
+        return render(request, 'search.html', {'search_goods': search_goods})
