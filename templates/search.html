@@ -1,0 +1,126 @@
+	{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block title %}
+    商品搜索结果
+{% endblock %}
+
+{% block body %}
+	<div class="navbar_con">
+		<div class="navbar clearfix">
+			<div class="subnav_con fl">
+				<h1>全部商品分类</h1>
+				<span></span>
+				<ul class="subnav">
+                    <li><a href="{% url 'goods:list' 'costume' %}" class="fruit">服装配饰</a></li>
+                    <li><a href="{% url 'goods:list' 'electronics' %}" class="seafood">数码科技</a></li>
+                    <li><a href="{% url 'goods:list' 'sport' %}" class="meet">运动代步</a></li>
+                    <li><a href="{% url 'goods:list' 'stationery' %}" class="egg">书籍文具</a></li>
+                    <li><a href="{% url 'goods:list' 'game' %}" class="vegetables">公益服务</a></li>
+                    <li><a href="{% url 'goods:list' 'other' %}" class="ice">其他</a></li>
+				</ul>
+			</div>
+			<ul class="navlist fl">
+				<li><a href="{% url 'goods:index' %}">首页</a></li>
+				<li class="interval">|</li>
+				<li><a href="{% url 'goods:list' 'all' %}">淘一淘</a></li>
+				<li class="interval">|</li>
+				<li><a href="">求购商城</a></li>
+                <li class="interval">|</li>
+				<li><a href="" style="text-decoration:line-through;" onclick="alert('暂未开发完成,敬请期待')">公益活动</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="breadcrumb">
+		<a href="#">全部分类</a>
+		<span>></span>
+		<a href="#">搜索结果</a>
+	</div>
+
+	<div class="main_wrap clearfix">
+
+
+
+			<ul class="goods_type_list clearfix">
+                {% for s_goods in search_goods.object_list %}
+                				<li>
+					<a href="{% url 'goods:detail' %}?good_id={{ s_goods.id }}"  target="_blank"><img src="{{ MEDIA_URL }}{{ s_goods.goods_pic }}"></a>
+					<h4><a href="{% url 'goods:detail' %}?good_id={{ s_goods.id }}"  target="_blank">{{ s_goods.goods_name }}</a></h4>
+					<div class="operate">
+						<span class="prize">￥{{ s_goods.goods_price }}</span>
+						<span class="unit">原价：{{ s_goods.goods_old_price }}</span>
+						<a href="cart.html" class="add_goods" title="加入购物车"></a>
+					</div>
+				</li>
+                {% endfor %}
+
+
+			</ul>
+
+			<div class="pagenation">
+                 {% if search_goods.has_previous %}
+                        <a href="?{{ search_goods.previous_page_number }}" class="prev">上一页</a>
+                 {% endif %}
+                {% for page in search_goods.pages %}
+                    {% if page %}
+                        {% ifequal page search_goods.number %}
+                            <a href="?keyboard={{ keyboard }}&page={{ page }}" class="active">{{ page }}</a>
+                        {% else %}
+                            <a href="?keyboard={{ keyboard}}&page={{ page }}" class="page" >{{ page }}</a>
+                        {% endifequal %}
+                    {% else %}
+                        <a href="none" class="">...</a>
+                    {% endif %}
+                {% endfor %}
+                {% if search_goods.has_next %}
+                    <a href="?keyboard={{ keyboard }}&page={{ search_goods.next_page_number }}" class="next"> 下一页</a>
+
+                {% endif %}
+
+			</div>
+
+	</div>
+
+
+	<!--右侧悬浮菜单-->
+	<div class="guide">
+		<div class="guide-wrap">
+			<a href="#" class="edit" title="常见问题"><span>常见问题</span></a>
+			<a href="#" class="find" title="购物车"><span>购物车</span></a>
+			<a href="#" class="report" title="在线咨询"><span>在线咨询</span></a>
+			<a href="javascript:window.scrollTo(0,0)" class="top" title="回顶部"><span>回顶部</span></a>
+		</div>
+	</div>
+
+{% block js %}
+    <script type="text/javascript" src="{% static 'js/slide.js' %}"></script>
+    <script type="text/javascript">
+        BCSlideshow('focuspic');
+        var oFruit = document.getElementById('fruit_more');
+        var oShownum = document.getElementById('show_count');
+
+        var hasorder = localStorage.getItem('order_finish');
+
+        if(hasorder)
+        {
+            oShownum.innerHTML = '2';
+        }
+
+        oFruit.onclick = function(){
+            window.location.href = 'list.html';
+        }
+    </script>
+
+{% endblock %}
+
+{% endblock %}
+
+
+
+
+

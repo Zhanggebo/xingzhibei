@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a172d3e6-8753-422d-bbf5-a944ceee2f74" name="默认的" comment="搜索">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/df_goods/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/df_goods/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/df_goods/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/df_goods/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.md" beforeDir="false" afterPath="$PROJECT_DIR$/log.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/slide.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/slide.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/search/indexes/df_goods/goodsinfo_text.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/search/search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiantian/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiantian/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiantian/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiantian/urls.py" afterDir="false" />
-    </list>
+    <list default="true" id="a172d3e6-8753-422d-bbf5-a944ceee2f74" name="默认的" comment="搜索" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tiantian/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2364">
-              <caret line="59" column="20" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="20" />
+            <state relative-caret-position="-2336">
+              <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -82,11 +70,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/slide.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="132" column="2" selection-start-line="132" selection-start-column="2" selection-end-line="132" selection-end-column="2" />
+            <state relative-caret-position="268">
+              <caret line="136" column="1" lean-forward="true" selection-start-line="136" selection-start-column="1" selection-end-line="136" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/search.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="48" column="44" lean-forward="true" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -209,9 +206,9 @@
         <option value="$PROJECT_DIR$/tiantian/settings.py" />
         <option value="$PROJECT_DIR$/static/js/slide.js" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/templates/search.html" />
         <option value="$PROJECT_DIR$/apps/df_goods/views.py" />
         <option value="$PROJECT_DIR$/log.md" />
+        <option value="$PROJECT_DIR$/templates/search.html" />
       </list>
     </option>
   </component>
@@ -250,6 +247,11 @@
               <item name="xingzhibei" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xingzhibei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xingzhibei" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xingzhibei" type="b2602c69:ProjectViewProjectNode" />
@@ -372,7 +374,7 @@
       <workItem from="1565769594318" duration="1450000" />
       <workItem from="1565772205773" duration="736000" />
       <workItem from="1565851250649" duration="122000" />
-      <workItem from="1565851378214" duration="442000" />
+      <workItem from="1565851378214" duration="905000" />
     </task>
     <task id="LOCAL-00001" summary="更新">
       <created>1564019619899</created>
@@ -437,11 +439,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565677601098</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="搜索">
+      <created>1565851839876</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1565851839876</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44722000" />
+    <option name="totallyTimeSpent" value="45185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -453,14 +462,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.333795" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7680965" visible="true" weight="0.3504155" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7680965" weight="0.3504155" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info active="true" anchor="bottom" id="GitHub Pull Requests" order="7" sideWeight="0.49798927" visible="true" weight="0.32963988" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.23190348" side_tool="true" visible="true" weight="0.3504155" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.18230563" side_tool="true" visible="true" weight="0.34903046" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.8183646" weight="0.32686982" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.81769437" weight="0.32686982" />
       <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.49932975" weight="0.32963988" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.8163539" weight="0.45844877" />
       <window_info anchor="bottom" id="manage.py@tiantian" order="13" sideWeight="0.49262735" weight="0.34487534" />
@@ -516,7 +525,8 @@
     <MESSAGE value="添加comment model,其他前端页面优化更新" />
     <MESSAGE value="df_goods df_user 改成中文名" />
     <MESSAGE value="全局搜索" />
-    <option name="LAST_COMMIT_MESSAGE" value="全局搜索" />
+    <MESSAGE value="搜索" />
+    <option name="LAST_COMMIT_MESSAGE" value="搜索" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://G:/ENVS/tiantian_env/Lib/site-packages/django/views/generic/__init__.py" />
@@ -770,13 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-684">
@@ -796,8 +799,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tiantian/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2364">
-          <caret line="59" column="20" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="20" />
+        <state relative-caret-position="-2336">
+          <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -841,8 +844,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/slide.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="132" column="2" selection-start-line="132" selection-start-column="2" selection-end-line="132" selection-end-column="2" />
+        <state relative-caret-position="268">
+          <caret line="136" column="1" lean-forward="true" selection-start-line="136" selection-start-column="1" selection-end-line="136" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="48" column="44" lean-forward="true" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
         </state>
       </provider>
     </entry>
