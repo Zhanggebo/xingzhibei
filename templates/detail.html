@@ -10,160 +10,186 @@
 {% endblock %}
 
 {% block body %}
-	<div class="navbar_con">
-		<div class="navbar clearfix">
-			<div class="subnav_con fl">
-				<h1>全部商品分类</h1>
-				<span></span>
-				<ul class="subnav">
+    <div class="navbar_con">
+        <div class="navbar clearfix">
+            <div class="subnav_con fl">
+                <h1>全部商品分类</h1>
+                <span></span>
+                <ul class="subnav">
                     <li><a href="{% url 'goods:list' 'costume' %}" class="fruit">服装配饰</a></li>
                     <li><a href="{% url 'goods:list' 'electronics' %}" class="seafood">数码科技</a></li>
                     <li><a href="{% url 'goods:list' 'sport' %}" class="meet">运动代步</a></li>
                     <li><a href="{% url 'goods:list' 'stationery' %}" class="egg">书籍文具</a></li>
                     <li><a href="{% url 'goods:list' 'game' %}" class="vegetables">公益服务</a></li>
                     <li><a href="{% url 'goods:list' 'other' %}" class="ice">其他</a></li>
-				</ul>
-			</div>
-			<ul class="navlist fl">
-				<li><a href="{% url 'goods:index' %}">首页</a></li>
-				<li class="interval">|</li>
-				<li><a href="{% url 'goods:list' 'all' %}">淘一淘</a></li>
-				<li class="interval">|</li>
-				<li><a href="">求购商城</a></li>
+                </ul>
+            </div>
+            <ul class="navlist fl">
+                <li><a href="{% url 'goods:index' %}">首页</a></li>
                 <li class="interval">|</li>
-				<li><a href="" style="text-decoration:line-through;" onclick="alert('暂未开发完成,敬请期待')">公益活动</a></li>
+                <li><a href="{% url 'goods:list' 'all' %}">淘一淘</a></li>
                 <li class="interval">|</li>
-			</ul>
-		</div>
-	</div>
+                <li><a href="">求购商城</a></li>
+                <li class="interval">|</li>
+                <li><a href="" style="text-decoration:line-through;" onclick="alert('暂未开发完成,敬请期待')">公益活动</a></li>
+                <li class="interval">|</li>
+            </ul>
+        </div>
+    </div>
 
-	<div class="breadcrumb">
-		<a href="{% url 'goods:list' 'all' %}">淘一淘</a>
-		<span>></span>
-		<a href="#">商品详情</a>
-	</div>
+    <div class="breadcrumb">
+        <a href="{% url 'goods:list' 'all' %}">淘一淘</a>
+        <span>></span>
+        <a href="#">商品详情</a>
+    </div>
 
-	<div class="goods_detail_con clearfix">
-		<div class="goods_detail_pic fl"><img src="{{ MEDIA_URL }}{{ good.goods_pic }}" width="380" height="380"></div>
+    <div class="goods_detail_con clearfix">
+        <div class="goods_detail_pic fl"><img src="{{ MEDIA_URL }}{{ good.goods_pic }}" width="380" height="380"></div>
 
-		<div class="goods_detail_list fr">
-			<h3>{{ good.goods_name }}</h3>
-			<p>{{ good.goods_detail }}</p>
-			<div class="prize_bar">
-				<span class="show_pirze">¥<em>{{ good.goods_price }}</em></span>
-				<span class="show_unit">新旧程度：{{ good.goods_degree }}成</span>
-			</div>
-			<div class="goods_num clearfix">
-				<div class="num_name fl">数 量：</div>
-				<div class="num_add fl">
-					<input type="text" class="num_show fl" value="1">
-					<a href="javascript:;" class="add fr">+</a>
-					<a href="javascript:;" class="minus fr">-</a>
-				</div>
-			</div>
-			<div class="total">总价：<em>150元</em></div>
-			<div class="operate_btn">
-{#				<a href="javascript:;" class="buy_btn">立即购买</a>#}
-				<a href="javascript:;" class="add_cart" id="add_cart">加入收藏</a>
-			</div>
-		</div>
-	</div>
+        <div class="goods_detail_list fr">
+            <p hidden id="good_id">{{ good.id }}</p>
+            <h3>{{ good.goods_name }}</h3>
+            <p>{{ good.goods_detail }}</p>
+            <div class="prize_bar">
+                <span class="show_pirze">¥<em>{{ good.goods_price }}</em></span>
+                <span class="show_unit">新旧程度：{{ good.goods_degree }}成</span>
+            </div>
+            <div class="goods_num clearfix">
+                <div class="num_name fl">数 量：</div>
+                <div class="num_add fl">
+                    <input type="text" class="num_show fl" value="1">
+                    <a href="javascript:;" class="add fr">+</a>
+                    <a href="javascript:;" class="minus fr">-</a>
+                </div>
+            </div>
+            <div class="total">总价：<em>150元</em></div>
+            <div class="operate_btn">
+                {#				<a href="javascript:;" class="buy_btn">立即购买</a>#}
+                <a href="javascript:" class="add_cart" id="add_cart"><span id="add">加入收藏</span></a>
+            </div>
+        </div>
+    </div>
 
-	<div class="main_wrap clearfix">
-		<div class="l_wrap fl clearfix">
-			<div class="new_goods">
-				<h3>闲置宝贝推荐</h3>
-				<ul>
+    <div class="main_wrap clearfix">
+        <div class="l_wrap fl clearfix">
+            <div class="new_goods">
+                <h3>闲置宝贝推荐</h3>
+                <ul>
                     {% for good_x in good_ty %}
                         <li>
-						<a href="{% url 'goods:detail' %}?good_id={{ good_x.id }}"><img src="{{ MEDIA_URL }}{{ good_x.goods_pic }}"></a>
-						<h4><a href="{% url 'goods:detail' %}?good_id={{ good_x.id }}">{{ good_x.goods_type }}</a></h4>
-						<div class="prize">{{ good_x.goods_price }}</div>
-					</li>
+                            <a href="{% url 'goods:detail' %}?good_id={{ good_x.id }}"><img
+                                    src="{{ MEDIA_URL }}{{ good_x.goods_pic }}"></a>
+                            <h4><a href="{% url 'goods:detail' %}?good_id={{ good_x.id }}">{{ good_x.goods_type }}</a>
+                            </h4>
+                            <div class="prize">{{ good_x.goods_price }}</div>
+                        </li>
                     {% endfor %}
-{#					<li>#}
-{#						<a href="#"><img src={% static 'images/goods/goods001.jpg' %}></a>#}
-{#						<h4><a href="#">运动耳机</a></h4>#}
-{#						<div class="prize">￥80</div>#}
-{#					</li>#}
-{#					<li>#}
-{#						<a href="#"><img src={% static 'images/goods/goods002.jpg' %}></a>#}
-{#						<h4><a href="#">英语四级资料</a></h4>#}
-{#						<div class="prize">￥55</div>#}
-{#					</li>#}
-				</ul>
-			</div>
-		</div>
+                    {#					<li>#}
+                    {#						<a href="#"><img src={% static 'images/goods/goods001.jpg' %}></a>#}
+                    {#						<h4><a href="#">运动耳机</a></h4>#}
+                    {#						<div class="prize">￥80</div>#}
+                    {#					</li>#}
+                    {#					<li>#}
+                    {#						<a href="#"><img src={% static 'images/goods/goods002.jpg' %}></a>#}
+                    {#						<h4><a href="#">英语四级资料</a></h4>#}
+                    {#						<div class="prize">￥55</div>#}
+                    {#					</li>#}
+                </ul>
+            </div>
+        </div>
 
-		<div class="r_wrap fr clearfix">
-			<ul class="detail_tab clearfix">
-				<li class="active">商品介绍</li>
-				<li>评论</li>
-			</ul>
+        <div class="r_wrap fr clearfix">
+            <ul class="detail_tab clearfix">
+                <li class="active">商品介绍</li>
+                <li>评论</li>
+            </ul>
 
-			<div class="tab_content">
-				<dl>
-					<dt style="font-size: 32px">商品详情：</dt>
-					<dd>{{ good.goods_introduce | safe }}</dd>
-				</dl>
-			</div>
+            <div class="tab_content">
+                <dl>
+                    <dt style="font-size: 32px">商品详情：</dt>
+                    <dd>{{ good.goods_introduce | safe }}</dd>
+                </dl>
+            </div>
 
-		</div>
-	</div>
+        </div>
+    </div>
 
-	<div class="add_jump"></div>
+    <div class="add_jump"></div>
 
 
-	<!--右侧悬浮菜单-->
-	<div class="guide">
-		<div class="guide-wrap">
-			<a href="#" class="edit" title="常见问题"><span>常见问题</span></a>
-			<a href="#" class="find" title="购物车"><span>购物车</span></a>
-			<a href="#" class="report" title="在线咨询"><span>在线咨询</span></a>
-			<a href="javascript:window.scrollTo(0,0)" class="top" title="回顶部"><span>回顶部</span></a>
-		</div>
-	</div>
+    <!--右侧悬浮菜单-->
+    <div class="guide">
+        <div class="guide-wrap">
+            <a href="#" class="edit" title="常见问题"><span>常见问题</span></a>
+            <a href="#" class="find" title="购物车"><span>购物车</span></a>
+            <a href="#" class="report" title="在线咨询"><span>在线咨询</span></a>
+            <a href="javascript:window.scrollTo(0,0)" class="top" title="回顶部"><span>回顶部</span></a>
+        </div>
+    </div>
 
-{% block js %}
-    <script type="text/javascript" src="{% static 'js/slide.js' %}"></script>
-    <script type="text/javascript">
-        BCSlideshow('focuspic');
-        var oFruit = document.getElementById('fruit_more');
-        var oShownum = document.getElementById('show_count');
+    {% block js %}
 
-        var hasorder = localStorage.getItem('order_finish');
+        <script type="text/javascript" src="{% static 'js/slide.js' %}"></script>
+        <script type="text/javascript">
+            BCSlideshow('focuspic');
+            var oFruit = document.getElementById('fruit_more');
+            var oShownum = document.getElementById('show_count');
 
-        if(hasorder)
-        {
-            oShownum.innerHTML = '2';
-        }
+            var hasorder = localStorage.getItem('order_finish');
 
-        oFruit.onclick = function(){
-            window.location.href = 'list.html';
-        }
-    </script>
+            if (hasorder) {
+                oShownum.innerHTML = '2';
+            }
 
-	<script type="text/javascript">
-		var $add_x = $('#add_cart').offset().top;
-		var $add_y = $('#add_cart').offset().left;
+            oFruit.onclick = function () {
+                window.location.href = 'list.html';
+            }
+        </script>
+        <script>
+            var $add_x = $('#add_cart').offset().top;
+            var $add_y = $('#add_cart').offset().left;
 
-		var $to_x = $('#show_count').offset().top;
-		var $to_y = $('#show_count').offset().left;
+            var $to_x = $('#show_count').offset().top;
+            var $to_y = $('#show_count').offset().left;
 
-		$(".add_jump").css({'left':$add_y+80,'top':$add_x+10,'display':'block'});
-		$('#add_cart').click(function(){
-			$(".add_jump").stop().animate({
-				'left': $to_y+7,
-				'top': $to_x+7},
-				"fast", function() {
-					$(".add_jump").fadeOut('fast',function(){
-						$('#show_count').html(2);
-					});
+            $(".add_jump").css({'left': $add_y + 80, 'top': $add_x + 10, 'display': 'block'});
 
-			});
-		})
-	</script>
-{% endblock %}
+            $("#add_cart").click(function () {
+                $(".add_jump").stop().animate({
+                        'left': $to_y + 7,
+                        'top': $to_x + 7
+                    },
+                    "fast", function () {
+                        $(".add_jump").fadeOut('', function () {
+                            $('#show_count').html({{ request.session.user_fav_products_num }} +1);
+                        });
+
+                    });
+            })
+        </script>
+
+        <script>
+            $("#add_cart").click(function () {
+
+                var good_id = $("#good_id").text();
+                $.ajax({
+                    url: "{% url 'user:cart' %}",
+                    type: "post",
+                    data: {
+                        'csrfmiddlewaretoken': '{{ csrf_token }}',
+                        {#用户信息#}
+                        'good_id': good_id
+                    },
+                    success: function (date) {
+                        {#window.location.reload();#}
+                    }
+
+                })
+            })
+        </script>
+
+
+    {% endblock %}
 
 {% endblock %}
 

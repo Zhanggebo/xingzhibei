@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 from django.http import JsonResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 
-from .models import UserProfile,College
+from .models import UserProfile,College,UserFavorite
 
 from . import user_decorator
 
@@ -90,11 +90,17 @@ class Login(View):
                 'error_msg': msg,
             })
 
+
+        # 获取用户收藏的产品
+        user_fav_products_num = UserFavorite.objects.filter(user=user[0].id).count()
+        print(user_fav_products_num)
+
         # 登录成功设置session
         request.session['is_login'] = True
         request.session['user_sno'] = user_sno
         request.session['user_name'] = user[0].user_name
         request.session['user_id'] = user[0].id
+        request.session['user_fav_products_num'] = user_fav_products_num
         return redirect('/')
 
 # 登出
@@ -110,15 +116,36 @@ def logout(request):
     return redirect("/user/login/")
 
 
-# 用户
-
+# 用户收藏
 class Cart(View):
 
     @user_decorator.login
     def get(self, request):
-        return render(request, 'df_user/cart.html')
+        # 获取当前用户收藏的商品
+        user_sno  = request.session.get('user_sno')
+        user_fav = UserFavorite.objects.filter(user__user_sno=user_sno)
+        return render(request, 'df_user/cart.html', {
+            'user_fav': user_fav
+        })
+
+    def post(self, request):
+        # 添加收藏商品
+        user_id = request.session.get('user_id')
+        good_id = request.POST.get('good_id')
+
+# 下一步判断用户是否已经添加过
+#         user_sno  = request.session.get('user_sno')
+#         is_in_good = UserFavorite.objects.filter(user__user_sno=user_sno, good__goods_id=good_id    )
+#         print(is_in_good.good)
+
+        user_fav = UserFavorite()
+        user_fav.user_id = user_id
+        user_fav.good_id = good_id
+        user_fav.save()
+        return  HttpResponse('ok')
 
 
+# 用户信息
 class UserCenterInfo(View):
     @user_decorator.login
     def get(self, request):

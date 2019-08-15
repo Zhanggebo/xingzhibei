@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'apps.ad',
     'apps.df_goods',
     'apps.df_user',
+    'haystack',#全文检索
 
     # 富文本编辑器
     'tinymce',
@@ -152,7 +153,7 @@ SESSION_SAVE_EVERY_REQUEST = True
 # SimpleSetting
 
 # 配置后台logo
-SIMPLEUI_LOGO = 'https://tse1-mm.cn.bing.net/th?id=OIP.CBDn9VJAXW5YcmKQgfySwQHaFj&w=238&h=177&c=7&o=5&pid=1.7'
+SIMPLEUI_LOGO = '/static/images/logo_back.jpg'
 
 # 分页
 PAGINATION_SETTINGS = {
@@ -165,3 +166,21 @@ PAGINATION_SETTINGS = {
 }
 
 
+#全文检索配置
+# HAYSTACK_CONNECTIONS = {
+#     'default':{
+#         'ENGINE':'haystack.backends.whoosh_cn_backend.WhooshEngine',
+#         'PATH':os.path.join(BASE_DIR, 'whoosh_index'),
+#     }
+# }
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
+    }
+}
+
+
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 1  #搜索显示商品每页商品个数
