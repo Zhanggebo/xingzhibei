@@ -38,7 +38,7 @@
         <div class="slide fl">
             <ul class="slide_pics">
                 {% for ad in all_ads %}
-                    <li><img src="{{ MEDIA_URL }}{{ ad.banner_imamge }}" alt="幻灯片" title="{{ ad.banner_describe }}">
+                    <li><img src="{{ MEDIA_URL }}{{ ad.banner_imamge }}" alt="幻灯片" title="{{ ad.banner_describe }} " width="760" height="270">
                     </li>
                 {% endfor %}
             </ul>
