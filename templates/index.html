@@ -262,14 +262,7 @@
             }
         </script>
 
-        <script>
-            function is_login() {
-                alert('亲，您还没有登录哦。为了更好的用户体验,还请您登陆哦.');
-            }
-            {% if not request.session.is_login %}
-                is_login();
-            {% endif %}
-        </script>
+
     {% endblock %}
 
 {% endblock %}

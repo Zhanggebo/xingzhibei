@@ -124,6 +124,12 @@ class Cart(View):
         # 获取当前用户收藏的商品
         user_sno  = request.session.get('user_sno')
         user_fav = UserFavorite.objects.filter(user__user_sno=user_sno)
+
+        # del_good_id = request.GET.get('del_good_id')
+        # user = UserFavorite.objects.filter(user__user_sno=user_sno)
+        # print(user[0].good.id)
+
+
         return render(request, 'df_user/cart.html', {
             'user_fav': user_fav
         })
@@ -132,17 +138,33 @@ class Cart(View):
         # 添加收藏商品
         user_id = request.session.get('user_id')
         good_id = request.POST.get('good_id')
+        print(good_id)
+        user_sno  = request.session.get('user_sno')
+        # 下一步判断用户是否已经添加过
+        is_in_good = UserFavorite.objects.filter(user__user_sno=user_sno)
+        # 该用户收藏为0的话
+        if not is_in_good:
+            user_fav = UserFavorite()
+            user_fav.user_id = user_id
+            user_fav.good_id = good_id
+            user_fav.save()
+            return redirect('/')
 
-# 下一步判断用户是否已经添加过
-#         user_sno  = request.session.get('user_sno')
-#         is_in_good = UserFavorite.objects.filter(user__user_sno=user_sno, good__goods_id=good_id    )
-#         print(is_in_good.good)
+        for i in is_in_good:
+            print(i.good.goods_name)
+            print(i.good.id)
+        #     if int(good_id) == i.good_id:
+        #         print('该商品已经收藏过')
+        #         return redirect('/')
+        #     else:
+        #         user_fav = UserFavorite()
+        #         user_fav.user_id = user_id
+        #         user_fav.good_id = good_id
+        #         user_fav.save()
+        #         print('ok')
+        #         return redirect('/')
+        return redirect('/')
 
-        user_fav = UserFavorite()
-        user_fav.user_id = user_id
-        user_fav.good_id = good_id
-        user_fav.save()
-        return  HttpResponse('ok')
 
 
 # 用户信息
