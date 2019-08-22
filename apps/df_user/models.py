@@ -28,7 +28,6 @@ class UserProfile(models.Model):
     user_mobile = models.CharField(verbose_name='手机', max_length=12, null=True, blank=True)
     user_mail = models.CharField(max_length=30, null=True, blank=True, verbose_name='邮箱')
     user_address = models.CharField(max_length=100, verbose_name='地址', null=True, blank=True)
-
     add_time = models.DateTimeField(auto_now_add=True, verbose_name='用户添加时间')
 
     class Meta:

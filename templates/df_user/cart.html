@@ -4,7 +4,6 @@
     我的收藏
 {% endblock %}
 {% block body %}
-	<div class="total_count">全部商品<em>2</em>件</div>
 	<ul class="cart_list_th clearfix">
 		<li class="col01">商品名称</li>
 		<li class="col02">商品原价</li>
@@ -42,8 +41,11 @@
 
 {% block js %}
     <script>
+    console.log('dasd');
+    window.onload = function () {
         var good_nums = document.querySelectorAll(".col08").length;
         document.querySelector("#good_nums").innerText = good_nums;
+    }
     </script>
 {% endblock %}
 
