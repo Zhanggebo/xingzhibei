@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # apps
+    'apps.site_config',
     'apps.ad',
     'apps.df_goods',
     'apps.df_user',
