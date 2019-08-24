@@ -1,3 +1,4 @@
+from django.core.validators import RegexValidator
 from django.shortcuts import render,HttpResponse,redirect
 from django.views.generic import View
 from django.contrib.auth.hashers import make_password
@@ -5,6 +6,7 @@ from django.contrib.auth import get_user_model
 from django.http import JsonResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 
+from apps.df_user.forms import RegisterForm
 from .models import UserProfile,College,UserFavorite
 
 from . import user_decorator
@@ -21,48 +23,54 @@ class Register(View):
 
     # 处理注册请求
     def post(self, request):
-        user_sno = request.POST.get('user_name')
-        user_pwd =request.POST.get('pwd')
-        user_cpwd =request.POST.get('cpwd')
-        user_mail =request.POST.get('email')
+        register_form= RegisterForm(request.POST)
+        if register_form.is_valid():
+            user_sno = request.POST.get('user_name')
+            user_pwd =request.POST.get('pwd')
+            user_cpwd =request.POST.get('cpwd')
+            user_mail =request.POST.get('email')
 
-        # 判断用户是否存在
-        if  UserProfile.objects.filter(user_sno=user_sno):
-            msg = '<h1>用户名已经存在</h1>'
+            # 判断用户是否存在
+            if  UserProfile.objects.filter(user_sno=user_sno):
+                msg = '<h1>用户名已经存在</h1>'
+                return HttpResponse(msg)
+
+            # 判断两次密码
+            if user_pwd=='' or user_pwd!=user_cpwd:
+                msg = '<h1>两次密码不一致</h1>'
+                return HttpResponse(msg)
+            # 判断邮箱是否正确
+            from django.core.validators import validate_email
+            try:
+                validate_email(user_mail)
+            except:
+                msg = '<h1>请输入正确邮箱</h1>'
+                return HttpResponse(msg)
+
+
+            # 加密password进行保存
+            # user_profile.password = make_password(pass_word)
+            # user_profile.save()
+
+            # 密码加密
+            # s1 = sha1()
+            # s1.update(user_pwd)
+            # upwd3 = s1.hexdigest()
+
+            # 创建对象
+            user = UserProfile()
+            user.user_sno = user_sno
+            user.user_pwd = user_pwd
+            user.user_mail = user_mail
+            user.save()
+            # 注册成功
+            return render(request, 'df_user/login.html', {
+                'user_sno': user_sno,
+            })
+            # return redirect('/user/login/')
+        else:
+            msg = '<h1>请输入正确学号</h1>'
             return HttpResponse(msg)
-        # 判断两次密码
-        if user_pwd=='' or user_pwd!=user_cpwd:
-            msg = '<h1>两次密码不一致</h1>'
-            return HttpResponse(msg)
-        # 判断邮箱是否正确
-        from django.core.validators import validate_email
-        try:
-            validate_email(user_mail)
-        except:
-            msg = '<h1>请输入正确邮箱</h1>'
-            return HttpResponse(msg)
-
-
-        # 加密password进行保存
-        # user_profile.password = make_password(pass_word)
-        # user_profile.save()
-
-        # 密码加密
-        # s1 = sha1()
-        # s1.update(user_pwd)
-        # upwd3 = s1.hexdigest()
-
-        # 创建对象
-        user = UserProfile()
-        user.user_sno = user_sno
-        user.user_pwd = user_pwd
-        user.user_mail = user_mail
-        user.save()
-        # 注册成功
-        return render(request, 'df_user/login.html', {
-            'user_sno': user_sno,
-        })
-        # return redirect('/user/login/')
 
 # 登录
 class Login(View):
