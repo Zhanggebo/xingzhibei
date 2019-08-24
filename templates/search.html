@@ -62,29 +62,29 @@
 
 			</ul>
 
-			<div class="pagenation">
-                 {% if search_goods.has_previous %}
-                        <a href="?{{ search_goods.previous_page_number }}" class="prev">上一页</a>
-                 {% endif %}
-                {% for page in search_goods.pages %}
-                    {% if page %}
-                        {% ifequal page search_goods.number %}
-                            <a href="?keyboard={{ keyboard }}&page={{ page }}" class="active">{{ page }}</a>
-                        {% else %}
-                            <a href="?keyboard={{ keyboard}}&page={{ page }}" class="page" >{{ page }}</a>
-                        {% endifequal %}
-                    {% else %}
-                        <a href="none" class="">...</a>
-                    {% endif %}
-                {% endfor %}
-                {% if search_goods.has_next %}
-                    <a href="?keyboard={{ keyboard }}&page={{ search_goods.next_page_number }}" class="next"> 下一页</a>
-
-                {% endif %}
-
-			</div>
-
-	</div>
+{#			<div class="pagenation">#}
+{#                 {% if search_goods.has_previous %}#}
+{#                        <a href="?{{ search_goods.previous_page_number }}" class="prev">上一页</a>#}
+{#                 {% endif %}#}
+{#                {% for page in search_goods.pages %}#}
+{#                    {% if page %}#}
+{#                        {% ifequal page search_goods.number %}#}
+{#                            <a href="?keyboard={{ keyboard }}&page={{ page }}" class="active">{{ page }}</a>#}
+{#                        {% else %}#}
+{#                            <a href="?keyboard={{ keyboard}}&page={{ page }}" class="page" >{{ page }}</a>#}
+{#                        {% endifequal %}#}
+{#                    {% else %}#}
+{#                        <a href="none" class="">...</a>#}
+{#                    {% endif %}#}
+{#                {% endfor %}#}
+{#                {% if search_goods.has_next %}#}
+{#                    <a href="?keyboard={{ keyboard }}&page={{ search_goods.next_page_number }}" class="next"> 下一页</a>#}
+{##}
+{#                {% endif %}#}
+{##}
+{#			</div>#}
+{##}
+{#	</div>#}
 
 
 	<!--右侧悬浮菜单-->
