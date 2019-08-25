@@ -204,7 +204,6 @@ class UserCenterInfo(View):
         user_remark = request.POST.get('user_remark')
         # 找到这个用户
         user = UserProfile.objects.filter(id=user_id)
-        print(user_dormitory_building_id)
         user.update(user_college=user_colloge_id, user_name=user_name, user_mobile=user_mobile, user_dormitory_building=user_dormitory_building_id,
                     user_dormitory_num=user_dormitory_id,user_remark=user_remark)
         return HttpResponse('ok')
