@@ -7,188 +7,112 @@
 {% endblock %}
 {% block css %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-{#    <link rel="stylesheet" href="{% static 'css/boot.css' %}">#}
+    {#    <link rel="stylesheet" href="{% static 'css/boot.css' %}">#}
 {% endblock %}
 
 {% block body %}
     <div class="main_con clearfix">
-		<div class="left_menu_con clearfix">
-			<h3>用户中心</h3>
-			<ul>
-				<li><a href="{% url 'user:user_center_info' %}" class="active" >· 个人信息</a></li>
-{#				<li><a href="{% url 'user:user_center_order' %}">· 我的订单</a></li>#}
-			</ul>
-		</div>
-		<div class="right_content clearfix">
-				<div class="info_con clearfix">
-				<h3 class="common_title2">基本信息</h3>
-{#                        编辑按钮,弹框#}
-                        <div class="ed" style="float: right; margin: 50px 10px 0 0 ">
-					<!-- Button trigger modal -->
-					<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
-						修改信息
-					</button>
+        <div class="left_menu_con clearfix">
+            <h3>用户中心</h3>
+            <ul>
+                <li><a href="{% url 'user:user_center_info' %}" class="active">· 个人信息</a></li>
+                {#				<li><a href="{% url 'user:user_center_order' %}">· 我的订单</a></li>#}
+            </ul>
+        </div>
+        <div class="right_content clearfix">
+            <div class="info_con clearfix">
+                <h3 class="common_title2">基本信息</h3>
+                {#                        编辑按钮,弹框#}
+                <div class="ed" style="float: right; margin: 50px 10px 0 0 ">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+                        修改信息
+                    </button>
 
-					<!-- Modal -->
-					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-									<h4 class="modal-title" id="myModalLabel">编辑地址</h4>
-								</div>
-								<div class="modal-body">
-									<form class="form-horizontal">
-
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">编辑地址</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal">
                                         <div class="form-group">
-											<label for="adr" class="col-sm-2 control-label">学院</label>
-											<div class="col-sm-10">
-												<select  class="form-control-1" id="adr" style="float: left" name="user_colloge_id">
+                                            <label for="collage" class="col-sm-2 control-label">学院</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control-1" id="collage" style="float: left"
+                                                        name="user_colloge_id">
                                                     {% for college in all_colleges %}
-													    <option value = "{{ college.id }}" name="user_colloge_id" selected="selected">{{ college.college_name }}</option>
+                                                        <option value="{{ college.id }}" name="user_colloge_id"
+                                                                selected="selected">{{ college.college_name }}</option>
                                                     {% endfor %}
 
-												</select>
-											</div>
-										</div>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="user_name" class="col-sm-2 control-label">姓名：</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="user_name" value="{{ user_name }} "
+                                                       name="user_name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="user_mobile" class="col-sm-2 control-label">手机号：</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="user_mobile"
+                                                       value="{{ user_mobile }}" name="user_mobile">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="adr" class="col-sm-2 control-label">联系地址</label>
+
+                                            <div class="col-sm-10">
+                                                <select class="form-control-1" id="adr" style="float: left " name="dormitory_building_id">
+                                                    {% for dormitory_building in all_dormitory_buildings %}
+                                                        <option value="{{ dormitory_building.id }}"
+                                                                id="dormitory_building_id" name="dormitory_building_id">{{ dormitory_building.dormitory_building_name }}号楼
+                                                        </option>
+                                                    {% endfor %}
 
 
-										<div class="form-group">
-											<label for="inputEmail3" class="col-sm-2 control-label">姓名</label>
-											<div class="col-sm-10">
-												<input type="text" class="form-control" id="user_name" placeholder="姓名" name="user_name">
-											</div>
-										</div>
-										<div class="form-group">
-											<label for="inputPassword3" class="col-sm-2 control-label">手机号</label>
-											<div class="col-sm-10">
-												<input type="text" class="form-control" id="user_mobile" placeholder="手机号" name="user_mobile">
-											</div>
-										</div>
-										<div class="form-group">
-											<label for="adr" class="col-sm-2 control-label">联系地址</label>
-											<div class="col-sm-10">
-												<select  class="form-control-1" id="adr" style="float: left">
-													<option value = "银川能源学院" selected="selected">银川能源学院</option>
-													<option value = "学院">学院</option>
-												</select>
-												<select class="form-control-1"  id="adr" style="float: left ">
-													<option value = "None" selected="selected">楼号</option>
-													<option value = "1">1号楼</option>
-													<option value = "2">2号楼</option>
-													<option value = "3">3号楼</option>
-												</select>
-												<select class="form-control-1" id="adr" style="float: left ">
-													<option value = "None" selected="selected">宿舍号</option>
-													<option value = "101">101</option>
-													<option value = "102">102</option>
-													<option value = "...">103</option>
-													<option value = "...">104</option>
-													<option value = "...">105</option>
-													<option value = "...">106</option>
-													<option value = "...">107</option>
-													<option value = "...">108</option>
-													<option value = "...">109</option>
-													<option value = "...">110</option>
-													<option value = "...">111</option>
-													<option value = "...">112</option>
-													<option value = "...">123</option>
-													<option value = "...">114</option>
-													<option value = "...">115</option>
-													<option value = "...">116</option>
-													<option value = "...">117</option>
-													<option value = "...">118</option>
-													<option value = "...">119</option>
-													<option value = "...">120</option>
-													<option value = "...">121</option>
-													<option value = "...">122</option>
-													<option value = "...">123</option>
-													<option value = "...">124</option>
-													<option value = "...">125</option>
-													<option value = "...">126</option>
-													<option value = "...">127</option>
-													<option value = "...">128</option>
-													<option value = "...">201</option>
-													<option value = "...">202</option>
-													<option value = "...">203</option>
-													<option value = "...">204</option>
-													<option value = "...">205</option>
-													<option value = "...">206</option>
-													<option value = "...">207</option>
-													<option value = "...">208</option>
-													<option value = "...">209</option>
-													<option value = "...">210</option>
-													<option value = "...">211</option>
-													<option value = "...">212</option>
-													<option value = "...">223</option>
-													<option value = "...">214</option>
-													<option value = "...">215</option>
-													<option value = "...">216</option>
-													<option value = "...">217</option>
-													<option value = "...">218</option>
-													<option value = "...">219</option>
-													<option value = "...">220</option>
-													<option value = "...">221</option>
-													<option value = "...">222</option>
-													<option value = "...">223</option>
-													<option value = "...">224</option>
-													<option value = "...">225</option>
-													<option value = "...">226</option>
-													<option value = "...">227</option>
-													<option value = "...">228</option>
-													<option value = "...">301</option>
-													<option value = "...">302</option>
-													<option value = "...">303</option>
-													<option value = "...">304</option>
-													<option value = "...">305</option>
-													<option value = "...">306</option>
-													<option value = "...">307</option>
-													<option value = "...">308</option>
-													<option value = "...">309</option>
-													<option value = "...">310</option>
-													<option value = "...">311</option>
-													<option value = "...">312</option>
-													<option value = "...">323</option>
-													<option value = "...">314</option>
-													<option value = "...">315</option>
-													<option value = "...">316</option>
-													<option value = "...">317</option>
-													<option value = "...">318</option>
-													<option value = "...">319</option>
-													<option value = "...">320</option>
-													<option value = "...">321</option>
-													<option value = "...">322</option>
-													<option value = "...">323</option>
-													<option value = "...">324</option>
-													<option value = "...">325</option>
-													<option value = "...">326</option>
-													<option value = "...">327</option>
-													<option value = "...">328</option>
-												</select>
-											</div>
-										</div>
-									</form>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-									<button type="button" class="btn btn-primary" id="save">保存</button>
-								</div>
-							</div>
-						</div>
-					</div>
+                                                </select>
+                                                <select class="form-control-1" id="adr" style="float: left " name="dormitory_id">
+                                                    {% for dormitory in all_dormitories %}
+                                                        <option value="{{ dormitory.id }}" id="dormitory_id" name="dormitory_id">{{ dormitory.dormitory_num }}</option>
+                                                    {% endfor %}
 
-				</div>
+                                                </select>
+                                                <label for="user_remark">其他：<input type="text" id="user_remark"
+                                                                                    placeholder="非必填" value="{{ user_remark }}" ></label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                    <button type="button" class="btn btn-primary" id="save">保存</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-						<ul class="user_info_list">
-                            <li><span>学院：</span>{{ user_colege }}</li>
-							<li><span>学号：</span>{{ user_sno }}</li>
-							<li><span>姓名：</span>{{ user_name }}</li>
-							<li><span>手机号：</span>{{ user_mobile }}</li>
-							<li><span>联系地址：</span>{{ user_address }}</li>
-						</ul>
-				</div>
-		</div>
-</div>
+                </div>
+
+                <ul class="user_info_list">
+                    <li><span>学院：</span>{{ user_colege }}</li>
+                    <li><span>学号：</span>{{ user_sno }}</li>
+                    <li><span>姓名：</span>{{ user_name }}</li>
+                    <li><span>手机号：</span>{{ user_mobile }}</li>
+                    <li><span>联系地址：</span>{{ user_dormitory_building_name }}||{{ user_dormitory_num }}</li>
+                    <li><span>备注：</span>{{ user_remark }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     {% block js %}
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
@@ -200,25 +124,31 @@
                 var user_id = {{ request.session.user_id }};
                 var user_name = $('#user_name').val();
                 var user_mobile = $('#user_mobile').val();
+                var dormitory_building_id = $("select[name='dormitory_building_id']").val();
+                var dormitory_id = $("select[name='dormitory_id']").val();
+                var user_remark = $('#user_remark').val();
 
 
                 $.ajax({
-                url: "{% url 'user:user_center_info' %}",
-                type: "post",
-                data: {
-                    'csrfmiddlewaretoken': '{{ csrf_token }}' ,
-                    {#用户信息#}
-                    'user_colloge_id': user_colloge_id,
-                    'user_id': user_id,
-                    'user_name': user_name,
-                    'user_mobile': user_mobile
-                },
-                success: function (date) {
-                    alert('修改成功');
-                    window.location.reload();
-                }
+                    url: "{% url 'user:user_center_info' %}",
+                    type: "post",
+                    data: {
+                        'csrfmiddlewaretoken': '{{ csrf_token }}',
+                        {#用户信息#}
+                        'user_colloge_id': user_colloge_id,
+                        'user_id': user_id,
+                        'user_name': user_name,
+                        'user_mobile': user_mobile,
+                        'dormitory_building_id': dormitory_building_id,
+                        'dormitory_id':dormitory_id,
+                        'user_remark':user_remark
+                    },
+                    success: function (date) {
+                        alert(dormitory_building_id);
+                        window.location.reload();
+                    }
 
-            })
+                })
             })
         </script>
 

@@ -9,6 +9,14 @@ class CollegeAdmin(admin.ModelAdmin):
     list_display = ['id', 'college_name']
 
 
+@admin.register(DormitoryBuilding)
+class DormitoryBuildingAdmin(admin.ModelAdmin):
+    list_display = ['id', 'dormitory_building_name']
+
+@admin.register(Dormitory)
+class DormitoryAdmin(admin.ModelAdmin):
+    list_display = ['id', 'dormitory_num']
+
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
     list_display = ['user_name', 'user_sno', 'add_time']
