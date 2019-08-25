@@ -29,6 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('apps.df_goods.urls', namespace='goods')),
     path('user/', include('apps.df_user.urls' ,namespace='user')),
+    path('site_config/', include('apps.site_config.urls' ,namespace='site_config')),
 
     # 富文本编辑器url
     path('tinymce/', include('tinymce.urls')),
