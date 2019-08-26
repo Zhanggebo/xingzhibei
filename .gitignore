@@ -1,0 +1,24 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+
+apps/df_goods/__pycache__/apps.cpython-36.pyc
+apps/df_goods/migrations/__pycache__/0005_goodcomment.cpython-36.pyc
+apps/df_goods/migrations/__pycache__/0006_auto_20190809_0726.cpython-36.pyc
+apps/df_goods/migrations/__pycache__/0007_auto_20190812_1458.cpython-36.pyc
+apps/df_goods/migrations/__pycache__/0008_auto_20190812_1502.cpython-36.pyc
+apps/df_user/__pycache__/forms.cpython-36.pyc
+apps/df_user/migrations/__pycache__/0002_userfavorite.cpython-36.pyc
+apps/df_user/migrations/__pycache__/0003_auto_20190813_1021.cpython-36.pyc
+apps/df_user/migrations/__pycache__/0004_auto_20190813_1311.cpython-36.pyc
+apps/df_user/migrations/__pycache__/0005_auto_20190813_1323.cpython-36.pyc
+apps/df_user/migrations/__pycache__/0006_userprofile_user_fav.cpython-36.pyc
+apps/df_user/migrations/__pycache__/0007_auto_20190822_1058.cpython-36.pyc
+apps/df_user/migrations/__pycache__/0008_remove_userprofile_user_fav.cpython-36.pyc
+apps/df_user/migrations/__pycache__/0009_auto_20190825_1915.cpython-36.pyc
+apps/df_user/migrations/__pycache__/0010_auto_20190825_1943.cpython-36.pyc
+apps/df_user/migrations/__pycache__/0011_userprofile_user_remark.cpython-36.pyc
+apps/site_config/__pycache__/
+apps/site_config/migrations/__pycache__/
+xingzhibei/__pycache__/
+
+db.sqlite3
