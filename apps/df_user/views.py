@@ -80,12 +80,13 @@ class Register(View):
         user_pwd = request.POST.get('pwd')
         user_cpwd = request.POST.get('cpwd')
         user_mail = request.POST.get('email')
-        print(user_sno.isdigit())
         # 判断学号是否正确以及存在
+        if not user_sno.isdigit():
+            error_msg['user_sno'] = '亲,学号是数字哦'
         if UserProfile.objects.filter(user_sno=user_sno):
-            error_msg['user_sno'] = '该学号已经存在'
-        # if not( len(user_sno)<7 or len(user_sno)>12 )  or  user_sno.isdigit():
-        #     error_msg['user_sno'] = '请输入7-12位之间的学号(必须是数字)'
+            error_msg['user_sno'] = '亲,该学号已经存在,可联系工作人员进行实名审核哦'
+        if len(user_sno)<8 or len(user_sno)>11 :
+            error_msg['user_sno'] = '请输入8-11位的学号'
 
         # 判断两次密码
         if user_pwd == '' or user_pwd != user_cpwd:
