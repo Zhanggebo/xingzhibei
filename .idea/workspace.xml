@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a172d3e6-8753-422d-bbf5-a944ceee2f74" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/apps/df_user/views.py" afterPath="$PROJECT_DIR$/apps/df_user/views.py" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change beforePath="$PROJECT_DIR$/static/js/register.js" afterPath="$PROJECT_DIR$/static/js/register.js" />
+      <change beforePath="$PROJECT_DIR$/templates/df_user/register.html" afterPath="$PROJECT_DIR$/templates/df_user/register.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,50 +22,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="user_decorator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/df_user/user_decorator.py">
+      <file leaf-file-name="apps.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/site_config/apps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-270">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/df_user/views.py">
+      <file leaf-file-name="register.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/df_user/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="90" column="51" lean-forward="true" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
+            <state relative-caret-position="354">
+              <caret line="82" column="53" lean-forward="false" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
               <folding>
-                <element signature="e#549#596#0" expanded="false" />
-                <element signature="e#602#610#0" expanded="false" />
-                <element signature="e#3353#3699#0" expanded="false" />
-                <element signature="e#3645#3698#0" expanded="false" />
-                <element signature="e#3726#3828#0" expanded="false" />
-                <element signature="e#3860#4921#0" expanded="false" />
-                <element signature="e#3892#3936#0" expanded="false" />
-                <element signature="e#3975#4921#0" expanded="false" />
-                <element signature="e#4172#4294#0" expanded="false" />
-                <element signature="e#4244#4293#0" expanded="false" />
-                <element signature="e#4370#4493#0" expanded="false" />
-                <element signature="e#4443#4492#0" expanded="false" />
-                <element signature="e#4954#5261#0" expanded="false" />
-                <element signature="e#5008#5067#0" expanded="false" />
-                <element signature="e#5100#5111#0" expanded="false" />
-                <element signature="e#5294#6215#0" expanded="false" />
-                <element signature="e#5352#5746#0" expanded="false" />
-                <element signature="e#5498#5544#0" expanded="false" />
-                <element signature="e#5701#5745#0" expanded="false" />
-                <element signature="e#5785#6215#0" expanded="false" />
-                <element signature="e#6315#7640#0" expanded="false" />
-                <element signature="e#7043#7567#0" expanded="false" />
-                <element signature="e#7679#8452#0" expanded="false" />
-                <element signature="e#8489#8603#0" expanded="false" />
-                <element signature="e#8547#8603#0" expanded="false" />
-                <element signature="e#8638#8751#0" expanded="false" />
-                <element signature="e#8696#8751#0" expanded="false" />
+                <element signature="n#style#0;n#a#0;n#label#0;n#li#5;n#ul#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-405">
+              <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/register.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,7 +76,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&quot;(images/.*?)&quot;</find>
       <find>公益</find>
       <find>保存</find>
       <find>is_login</find>
@@ -111,6 +105,7 @@
       <find>user_info_list</find>
       <find>print</find>
       <find>加入购物车</find>
+      <find>勾选</find>
     </findStrings>
     <replaceStrings>
       <replace>{% static '$1'%&quot;</replace>
@@ -139,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apps/test1/admin.py" />
         <option value="$PROJECT_DIR$/apps/test1/models.py" />
         <option value="$PROJECT_DIR$/apps/df_advertising/admin.py" />
         <option value="$PROJECT_DIR$/apps/df_advertising/models.py" />
@@ -181,8 +175,6 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/apps/df_user/forms.py" />
         <option value="$PROJECT_DIR$/static/css/main.css" />
-        <option value="$PROJECT_DIR$/templates/df_user/register.html" />
-        <option value="$PROJECT_DIR$/static/js/register.js" />
         <option value="$PROJECT_DIR$/templates/df_user/login.html" />
         <option value="$PROJECT_DIR$/templates/df_user/user_center_info.html" />
         <option value="$PROJECT_DIR$/apps/site_config/views.py" />
@@ -190,6 +182,9 @@
         <option value="$PROJECT_DIR$/xingzhibei/settings.py" />
         <option value="$PROJECT_DIR$/templates/list.html" />
         <option value="$PROJECT_DIR$/apps/df_user/views.py" />
+        <option value="$PROJECT_DIR$/apps/site_config/apps.py" />
+        <option value="$PROJECT_DIR$/static/js/register.js" />
+        <option value="$PROJECT_DIR$/templates/df_user/register.html" />
       </list>
     </option>
   </component>
@@ -232,19 +227,13 @@
             <path>
               <item name="xingzhibei" type="b2602c69:ProjectViewProjectNode" />
               <item name="xingzhibei" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xingzhibei" type="b2602c69:ProjectViewProjectNode" />
               <item name="xingzhibei" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="df_user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xingzhibei" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xingzhibei" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="site_config" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xingzhibei" type="b2602c69:ProjectViewProjectNode" />
@@ -254,7 +243,8 @@
             <path>
               <item name="xingzhibei" type="b2602c69:ProjectViewProjectNode" />
               <item name="xingzhibei" type="462c0819:PsiDirectoryNode" />
-              <item name="xingzhibei" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="df_user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -482,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566875172679</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="临时更新">
+      <created>1566876256394</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1566876256394</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -578,13 +575,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/df_user/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/df_goods/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -820,14 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -844,32 +826,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="96" column="9" lean-forward="true" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/df_user/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/df_user/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1542">
-          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#span#1;n#li#1;n#ul#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#1;n#li#3;n#ul#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#1;n#li#4;n#ul#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#a#0;n#label#0;n#li#5;n#ul#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -955,6 +916,40 @@
             <element signature="e#8547#8603#0" expanded="false" />
             <element signature="e#8638#8751#0" expanded="false" />
             <element signature="e#8696#8751#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/site_config/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/df_user/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="82" column="53" lean-forward="false" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#label#0;n#li#5;n#ul#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -57,7 +57,7 @@
 					</li>
 					<li class="agreement">
 						<input type="checkbox" name="allow" id="allow" checked="checked" >
-						<label for="allow">同意<a href="#" style="text-decoration:underline;">《星之贝用户使用协议》</a></label>
+						<label for="allow">同意<a href="#" style="text-decoration:underline;" onclick="note()">《星之贝用户使用协议》</a></label>
 						<span class="error_tip2">提示信息</span>
 					</li>
 					<li class="reg_sub">
@@ -74,5 +74,18 @@
 
 	{% include 'base_foot.html' %}
 
+    <script>
+        function note() {
+            message = "首先欢迎各位使用星之贝校园二手交易平台，" +
+                "本平台由银川能源学院在校学生星之羽团队设计,编程完成。\n" +
+                "我们承诺不收取任何手续费用,免费使用\n" +
+                "目前处于开发阶段,由于是第一次我们自己写所有代码完成,功能刚开始可能不全,后期我们会逐步加入." +
+                "在1.0版本之前是测试版本,可能会影响到用户账户信息,还请大家包涵.\n" +
+                "想加入我们+qq705301804:";
+
+        alert(message);
+        }
+
+    </script>
 </body>
 </html>

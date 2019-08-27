@@ -94,6 +94,7 @@ $(function(){
 		{
 			$('#email').next().hide();
 			error_email = false;
+            $('#error_msg').add_style("color");
 		}
 		else
 		{
