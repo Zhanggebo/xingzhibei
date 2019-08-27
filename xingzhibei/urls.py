@@ -35,3 +35,8 @@ urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+# 全局配置404
+handler404 = 'apps.site_config.page404.'
+# handler500 = 'users.views.page_error'

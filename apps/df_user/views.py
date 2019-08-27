@@ -110,7 +110,9 @@ class Register(View):
             })
         else:
             print(error_msg)
-            return render(request, 'df_user/register.html',{'error_msg':error_msg})
+            return render(request, 'df_user/register.html', {'error_msg': error_msg})
+
+
 # 登录
 class Login(View):
 
@@ -219,10 +221,10 @@ class UserCenterInfo(View):
             'user_name': user_name,
             'user_mobile': user_mobile,
             'user_address': user_address,
-            'user_dormitory_building_name':user_dormitory_building_name,
+            'user_dormitory_building_name': user_dormitory_building_name,
             'all_colleges': all_colleges,
             'all_dormitory_buildings': all_dormitory_buildings,
-            'user_dormitory_num':user_dormitory_num,
+            'user_dormitory_num': user_dormitory_num,
             'user_remark': user_remark,
             'all_dormitories': all_dormitories
         }
@@ -239,8 +241,9 @@ class UserCenterInfo(View):
         user_remark = request.POST.get('user_remark')
         # 找到这个用户
         user = UserProfile.objects.filter(id=user_id)
-        user.update(user_college=user_colloge_id, user_name=user_name, user_mobile=user_mobile, user_dormitory_building=user_dormitory_building_id,
-                    user_dormitory_num=user_dormitory_id,user_remark=user_remark)
+        user.update(user_college=user_colloge_id, user_name=user_name, user_mobile=user_mobile,
+                    user_dormitory_building=user_dormitory_building_id,
+                    user_dormitory_num=user_dormitory_id, user_remark=user_remark)
         return HttpResponse('ok')
 
 

@@ -1,0 +1,53 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>404</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body{background-color: rgb(241,244,248);}
+        .clear{clear: both;}
+        .hide{display: none;}
+        .nf{
+            margin: 150px 0 0 0 ;
+        }
+        .nf p{
+            font-family: 华文彩云;
+        }
+        .nf span{
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nf" align="center">
+        <img src="{% static 'images/404.png' %}" alt="">
+        <p>啊哦！您要找的页面正在和您躲猫猫。。。<span><a href="index.html">返回首页</a></span></p>
+        <img src="{% static 'images/loading.png' %}" alt="">
+        <p>将在 <span id="mes">5</span> 秒钟后返回首页！</p>
+    </div>
+
+<!--Script Start-->
+
+<script language="javascript" type="text/javascript">
+    var i = 5000;
+    var intervalid;
+    intervalid = setInterval("fun()", 1000);
+    function fun() {
+    if (i === 0) {
+    window.location.href = "index.html";
+    clearInterval(intervalid);
+    }
+    document.getElementById("mes").innerHTML = i;
+    i--;
+    }
+</script>
+
+<!--Scropt End-->
+
+</body>
+</html>
