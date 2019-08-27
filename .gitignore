@@ -20,5 +20,3 @@ apps/df_user/migrations/__pycache__/0011_userprofile_user_remark.cpython-36.pyc
 apps/site_config/__pycache__/
 apps/site_config/migrations/__pycache__/
 xingzhibei/__pycache__/
-
-db.sqlite3
