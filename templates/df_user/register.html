@@ -26,15 +26,16 @@
 				<form action="{% url 'user:register' %}" method="post">
 				<ul>
 					<li>
-						<label for="user_name">用户名:</label>
-						<input type="text" name="user" id="user_name" placeholder="请输入您的用户名">
-						<span class="error_tip">提示信息</span>
+						<label for="user_name">姓名:</label>
+						<input type="text" name="user_name" id="user_name" placeholder="请输入您的姓名">
+						<span class="error_tip">{{ error_msg }}</span>
 
 					</li>
                     <li>
-						<label for="user_name">学号:</label>
-						<input type="text" name="user_name" id="user_name" placeholder="请输入您的真实学号">
+						<label for="user_sno">学号:</label>
+						<input type="text" name="user_sno" id="user_sno" placeholder="请输入您的真实学号">
 						<span class="error_tip">提示信息</span>
+                        <span style="float:left;height:30px;line-height:30px;margin-left:70px;color:#e62e2e;" id="error_msg">{{ error_msg.user_sno }}</span>
 
 					</li>
 					<li>
@@ -46,11 +47,13 @@
 						<label for="cpwd">确认密码:</label>
 						<input type="password" name="cpwd" id="cpwd">
 						<span class="error_tip">提示信息</span>
+                        <span style="float:left;height:30px;line-height:30px;margin-left:70px;color:#e62e2e;" id="error_msg">{{ error_msg.user_pwd }}</span>
 					</li>
 					<li>
 						<label for="email">邮箱:</label>
 						<input type="text" name="email" id="email">
-						<span class="error_tip">提示信息</span>
+						<span class="error_tip">{{ error_msg.user_mail }}</span>
+						<span style="float:left;height:30px;line-height:30px;margin-left:70px;color:#e62e2e;" id="error_msg">{{ error_msg.user_mail }}</span>
 					</li>
 					<li class="agreement">
 						<input type="checkbox" name="allow" id="allow" checked="checked" >
@@ -70,5 +73,6 @@
 	</div>
 
 	{% include 'base_foot.html' %}
+
 </body>
 </html>

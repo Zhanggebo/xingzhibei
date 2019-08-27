@@ -7,8 +7,8 @@ $(function(){
 	var error_check = false;
 
 
-	$('#user_name').blur(function() {
-		check_user_name();
+	$('#user_sno').blur(function() {
+		check_user_sno();
 	});
 
 	$('#pwd').blur(function() {
@@ -38,26 +38,26 @@ $(function(){
 	});
 
 
-	function check_user_name(){
-		var len = $('#user_name').val().length;
-		if(len<5||len>30)
+	function check_user_sno(){
+		var len = $('#user_sno').val().length;
+		if(len<8||len>11)
 		{
-			$('#user_name').next().html('请输入5-30个字符的用户名');
-			$('#user_name').next().show();
+			$('#user_sno').next().html('请输入8-11个字符的学号');
+			$('#user_sno').next().show();
 			error_name = true;
 		}
 		else
 		{
-			$('#user_name').next().hide();
-			error_name = false;
+			$('#user_sno').next().hide();
+            error_name = false;
 		}
 	}
 
 	function check_pwd(){
 		var len = $('#pwd').val().length;
-		if(len<6||len>20)
+		if(len<6||len>18)
 		{
-			$('#pwd').next().html('密码最少6位，最长20位')
+			$('#pwd').next().html('密码最少6位，最长18位')
 			$('#pwd').next().show();
 			error_password = true;
 		}
@@ -97,7 +97,7 @@ $(function(){
 		}
 		else
 		{
-			$('#email').next().html('你输入的邮箱格式不正确')
+			$('#email').next().html('你输入的邮箱格式不正确');
 			$('#email').next().show();
 			error_check_password = true;
 		}

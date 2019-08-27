@@ -23,42 +23,83 @@ class Register(View):
         return render(request, 'df_user/register.html')
 
     # 处理注册请求
+    # def post(self, request):
+    #     register_form = RegisterForm(request.POST)
+    #     if register_form.is_valid():
+    #         user_name = request.POST.get('name')
+    #         user_sno = request.POST.get('user_sno')
+    #         user_pwd = request.POST.get('pwd')
+    #         user_cpwd = request.POST.get('cpwd')
+    #         user_mail = request.POST.get('email')
+    #
+    #         # 判断学号是否存在
+    #         if UserProfile.objects.filter(user_sno=user_sno):
+    #             msg = '<h1>该学号已经存在</h1>'
+    #             return HttpResponse(msg)
+    #
+    #         # 判断两次密码
+    #         if user_pwd == '' or user_pwd != user_cpwd:
+    #             msg = '<h1>两次密码不一致</h1>'
+    #             return HttpResponse(msg)
+    #         # 判断邮箱是否正确
+    #         from django.core.validators import validate_email
+    #         try:
+    #             validate_email(user_mail)
+    #         except:
+    #             msg = '<h1>请输入正确邮箱</h1>'
+    #             return HttpResponse(msg)
+    #
+    #         # 加密password进行保存
+    #         # user_profile.password = make_password(pass_word)
+    #         # user_profile.save()
+    #
+    #         # 密码加密
+    #         # s1 = sha1()
+    #         # s1.update(user_pwd)
+    #         # upwd3 = s1.hexdigest()
+    #
+    #         # 创建对象
+    #         user = UserProfile()
+    #         user.user_name = user_name
+    #         user.user_sno = user_sno
+    #         user.user_pwd = user_pwd
+    #         user.user_mail = user_mail
+    #         user.save()
+    #         # 注册成功
+    #         return render(request, 'df_user/login.html', {
+    #             'user_sno': user_sno,
+    #         })
+    #         # return redirect('/user/login/')
+    #     else:
+    #         msg = '<h1>请输入正确学号</h1>'
+    #         return HttpResponse(msg)
+
+    #  原来的可以取消注释
     def post(self, request):
-        register_form = RegisterForm(request.POST)
-        if register_form.is_valid():
-            user_sno = request.POST.get('user_name')
-            user_pwd = request.POST.get('pwd')
-            user_cpwd = request.POST.get('cpwd')
-            user_mail = request.POST.get('email')
+        error_msg = {}
+        user_name = request.POST.get('user_name')
+        user_sno = request.POST.get('user_sno')
+        user_pwd = request.POST.get('pwd')
+        user_cpwd = request.POST.get('cpwd')
+        user_mail = request.POST.get('email')
 
-            # 判断用户是否存在
-            if UserProfile.objects.filter(user_sno=user_sno):
-                msg = '<h1>用户名已经存在</h1>'
-                return HttpResponse(msg)
+        # 判断学号是否存在
+        if UserProfile.objects.filter(user_sno=user_sno):
+            error_msg['user_sno'] = '该学号已经存在'
+        # 判断两次密码
+        if user_pwd == '' or user_pwd != user_cpwd:
+            error_msg['user_pwd'] = '两次密码不一致'
+        # 判断邮箱是否正确
+        from django.core.validators import validate_email
+        try:
+            validate_email(user_mail)
+        except:
+            error_msg['user_mail'] = '请输入正确邮箱'
 
-            # 判断两次密码
-            if user_pwd == '' or user_pwd != user_cpwd:
-                msg = '<h1>两次密码不一致</h1>'
-                return HttpResponse(msg)
-            # 判断邮箱是否正确
-            from django.core.validators import validate_email
-            try:
-                validate_email(user_mail)
-            except:
-                msg = '<h1>请输入正确邮箱</h1>'
-                return HttpResponse(msg)
-
-            # 加密password进行保存
-            # user_profile.password = make_password(pass_word)
-            # user_profile.save()
-
-            # 密码加密
-            # s1 = sha1()
-            # s1.update(user_pwd)
-            # upwd3 = s1.hexdigest()
-
+        if not error_msg:
             # 创建对象
             user = UserProfile()
+            user.user_name = user_name
             user.user_sno = user_sno
             user.user_pwd = user_pwd
             user.user_mail = user_mail
@@ -67,12 +108,9 @@ class Register(View):
             return render(request, 'df_user/login.html', {
                 'user_sno': user_sno,
             })
-            # return redirect('/user/login/')
         else:
-            msg = '<h1>请输入正确学号</h1>'
-            return HttpResponse(msg)
-
-
+            print(error_msg)
+            return render(request, 'df_user/register.html',{'error_msg':error_msg})
 # 登录
 class Login(View):
 
@@ -80,14 +118,13 @@ class Login(View):
         return render(request, 'df_user/login.html')
 
     def post(self, request):
-        user_sno = request.POST.get('username')
+        user_sno = request.POST.get('user_sno')
         user_pwd = request.POST.get('pwd')
 
         # 判断用户是否存在
         user = UserProfile.objects.filter(user_sno=user_sno)
         if not user:
             msg = '用户名不存在'
-            print(user)
             return render(request, 'df_user/login.html', {
                 'error_msg': msg,
             })
@@ -101,7 +138,6 @@ class Login(View):
 
         # 获取用户收藏的产品
         user_fav_products_num = UserFavorite.objects.filter(user=user[0].id).count()
-        print(user_fav_products_num)
 
         # 登录成功设置session
         request.session['is_login'] = True
@@ -172,7 +208,6 @@ class UserCenterInfo(View):
         user_dormitory_building_name = user.user_dormitory_building
         user_dormitory_num = user.user_dormitory_num
         user_remark = user.user_remark
-        print(user_dormitory_building_name)
 
         # 获取所有学院,宿舍楼,宿舍号
         all_colleges = College.objects.all().order_by('-id')

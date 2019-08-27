@@ -23,7 +23,7 @@
 				<div class="form_input">
 					<form action="{% url 'user:login' %}" method="post">
                         {% csrf_token %}
-						<input type="text" name="username" class="name_input" placeholder="请输入用户名（学号）" value="{{ user_sno }}">
+						<input type="text" name="user_sno" class="name_input" placeholder="请输入学号" value="{{ user_sno }}">
 {#						<div class="user_error">{{ error_msg }}</div>#}
 
 						<input type="password" name="pwd" class="pass_input" placeholder="请输入密码">
