@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a172d3e6-8753-422d-bbf5-a944ceee2f74" name="默认的" comment="搜索">
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/404.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/tiantian.iml" afterPath="$PROJECT_DIR$/.idea/tiantian.iml" />
+    <list default="true" id="a172d3e6-8753-422d-bbf5-a944ceee2f74" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/apps/df_user/views.py" afterPath="$PROJECT_DIR$/apps/df_user/views.py" />
-      <change beforePath="$PROJECT_DIR$/apps/site_config/views.py" afterPath="$PROJECT_DIR$/apps/site_config/views.py" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/templates/list.html" afterPath="$PROJECT_DIR$/templates/list.html" />
-      <change beforePath="$PROJECT_DIR$/xingzhibei/urls.py" afterPath="$PROJECT_DIR$/xingzhibei/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,12 +21,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="list.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/list.html">
+      <file leaf-file-name="user_decorator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/df_user/user_decorator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="89" column="37" lean-forward="false" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="37" />
+            <state relative-caret-position="-270">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/df_user/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="90" column="51" lean-forward="true" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
+              <folding>
+                <element signature="e#549#596#0" expanded="false" />
+                <element signature="e#602#610#0" expanded="false" />
+                <element signature="e#3353#3699#0" expanded="false" />
+                <element signature="e#3645#3698#0" expanded="false" />
+                <element signature="e#3726#3828#0" expanded="false" />
+                <element signature="e#3860#4921#0" expanded="false" />
+                <element signature="e#3892#3936#0" expanded="false" />
+                <element signature="e#3975#4921#0" expanded="false" />
+                <element signature="e#4172#4294#0" expanded="false" />
+                <element signature="e#4244#4293#0" expanded="false" />
+                <element signature="e#4370#4493#0" expanded="false" />
+                <element signature="e#4443#4492#0" expanded="false" />
+                <element signature="e#4954#5261#0" expanded="false" />
+                <element signature="e#5008#5067#0" expanded="false" />
+                <element signature="e#5100#5111#0" expanded="false" />
+                <element signature="e#5294#6215#0" expanded="false" />
+                <element signature="e#5352#5746#0" expanded="false" />
+                <element signature="e#5498#5544#0" expanded="false" />
+                <element signature="e#5701#5745#0" expanded="false" />
+                <element signature="e#5785#6215#0" expanded="false" />
+                <element signature="e#6315#7640#0" expanded="false" />
+                <element signature="e#7043#7567#0" expanded="false" />
+                <element signature="e#7679#8452#0" expanded="false" />
+                <element signature="e#8489#8603#0" expanded="false" />
+                <element signature="e#8547#8603#0" expanded="false" />
+                <element signature="e#8638#8751#0" expanded="false" />
+                <element signature="e#8696#8751#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -154,11 +185,11 @@
         <option value="$PROJECT_DIR$/static/js/register.js" />
         <option value="$PROJECT_DIR$/templates/df_user/login.html" />
         <option value="$PROJECT_DIR$/templates/df_user/user_center_info.html" />
-        <option value="$PROJECT_DIR$/apps/df_user/views.py" />
         <option value="$PROJECT_DIR$/apps/site_config/views.py" />
         <option value="$PROJECT_DIR$/xingzhibei/urls.py" />
         <option value="$PROJECT_DIR$/xingzhibei/settings.py" />
         <option value="$PROJECT_DIR$/templates/list.html" />
+        <option value="$PROJECT_DIR$/apps/df_user/views.py" />
       </list>
     </option>
   </component>
@@ -202,6 +233,12 @@
               <item name="xingzhibei" type="b2602c69:ProjectViewProjectNode" />
               <item name="xingzhibei" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xingzhibei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xingzhibei" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="df_user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xingzhibei" type="b2602c69:ProjectViewProjectNode" />
@@ -438,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566873479983</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="临时更新">
+      <created>1566875172679</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1566875172679</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -525,22 +569,15 @@
     <MESSAGE value="df_goods df_user 改成中文名" />
     <MESSAGE value="全局搜索" />
     <MESSAGE value="搜索" />
-    <MESSAGE value="临时更新" />
     <MESSAGE value="更改注册表单view代码逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="更改注册表单view代码逻辑" />
+    <MESSAGE value="临时更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="临时更新" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/df_goods/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="54" lean-forward="false" selection-start-line="0" selection-start-column="54" selection-end-line="0" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/df_user/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -870,51 +907,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/df_user/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-159">
-          <caret line="115" column="4" lean-forward="false" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
-          <folding>
-            <element signature="e#485#510#0" expanded="false" />
-            <element signature="e#544#3675#0" expanded="false" />
-            <element signature="e#576#623#0" expanded="false" />
-            <element signature="e#629#637#0" expanded="false" />
-            <element signature="e#2484#3675#0" expanded="false" />
-            <element signature="e#3200#3546#0" expanded="false" />
-            <element signature="e#3492#3545#0" expanded="false" />
-            <element signature="e#3573#3675#0" expanded="false" />
-            <element signature="e#3707#4768#0" expanded="false" />
-            <element signature="e#3739#3783#0" expanded="false" />
-            <element signature="e#3822#4768#0" expanded="false" />
-            <element signature="e#4019#4141#0" expanded="false" />
-            <element signature="e#4091#4140#0" expanded="false" />
-            <element signature="e#4217#4340#0" expanded="false" />
-            <element signature="e#4290#4339#0" expanded="false" />
-            <element signature="e#4801#5108#0" expanded="false" />
-            <element signature="e#4855#4914#0" expanded="false" />
-            <element signature="e#4947#4958#0" expanded="false" />
-            <element signature="e#5141#6062#0" expanded="false" />
-            <element signature="e#5199#5593#0" expanded="false" />
-            <element signature="e#5345#5391#0" expanded="false" />
-            <element signature="e#5548#5592#0" expanded="false" />
-            <element signature="e#5632#6062#0" expanded="false" />
-            <element signature="e#6104#8299#0" expanded="false" />
-            <element signature="e#6162#7487#0" expanded="false" />
-            <element signature="e#6890#7414#0" expanded="false" />
-            <element signature="e#7526#8299#0" expanded="false" />
-            <element signature="e#8336#8450#0" expanded="false" />
-            <element signature="e#8394#8450#0" expanded="false" />
-            <element signature="e#8485#8598#0" expanded="false" />
-            <element signature="e#8543#8598#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="89" column="37" lean-forward="false" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_user/user_decorator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/df_user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="90" column="51" lean-forward="true" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
+          <folding>
+            <element signature="e#549#596#0" expanded="false" />
+            <element signature="e#602#610#0" expanded="false" />
+            <element signature="e#3353#3699#0" expanded="false" />
+            <element signature="e#3645#3698#0" expanded="false" />
+            <element signature="e#3726#3828#0" expanded="false" />
+            <element signature="e#3860#4921#0" expanded="false" />
+            <element signature="e#3892#3936#0" expanded="false" />
+            <element signature="e#3975#4921#0" expanded="false" />
+            <element signature="e#4172#4294#0" expanded="false" />
+            <element signature="e#4244#4293#0" expanded="false" />
+            <element signature="e#4370#4493#0" expanded="false" />
+            <element signature="e#4443#4492#0" expanded="false" />
+            <element signature="e#4954#5261#0" expanded="false" />
+            <element signature="e#5008#5067#0" expanded="false" />
+            <element signature="e#5100#5111#0" expanded="false" />
+            <element signature="e#5294#6215#0" expanded="false" />
+            <element signature="e#5352#5746#0" expanded="false" />
+            <element signature="e#5498#5544#0" expanded="false" />
+            <element signature="e#5701#5745#0" expanded="false" />
+            <element signature="e#5785#6215#0" expanded="false" />
+            <element signature="e#6315#7640#0" expanded="false" />
+            <element signature="e#7043#7567#0" expanded="false" />
+            <element signature="e#7679#8452#0" expanded="false" />
+            <element signature="e#8489#8603#0" expanded="false" />
+            <element signature="e#8547#8603#0" expanded="false" />
+            <element signature="e#8638#8751#0" expanded="false" />
+            <element signature="e#8696#8751#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

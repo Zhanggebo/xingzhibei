@@ -14,8 +14,6 @@ from . import user_decorator
 from hashlib import sha1
 
 
-# Create your views here.
-
 # 注册
 class Register(View):
 
@@ -82,10 +80,13 @@ class Register(View):
         user_pwd = request.POST.get('pwd')
         user_cpwd = request.POST.get('cpwd')
         user_mail = request.POST.get('email')
-
-        # 判断学号是否存在
+        print(user_sno.isdigit())
+        # 判断学号是否正确以及存在
         if UserProfile.objects.filter(user_sno=user_sno):
             error_msg['user_sno'] = '该学号已经存在'
+        # if not( len(user_sno)<7 or len(user_sno)>12 )  or  user_sno.isdigit():
+        #     error_msg['user_sno'] = '请输入7-12位之间的学号(必须是数字)'
+
         # 判断两次密码
         if user_pwd == '' or user_pwd != user_cpwd:
             error_msg['user_pwd'] = '两次密码不一致'
