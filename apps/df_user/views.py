@@ -187,13 +187,14 @@ class Cart(View):
         user_id = request.session.get('user_id')
         good_id = request.POST.get('good_id')
         user_sno = request.session.get('user_sno')
-        # 下一步判断用户是否已经添加过
-        is_in_good = UserFavorite.objects.filter(user__user_sno=user_sno)
-        # 该用户收藏为0的话
-        user_fav = UserFavorite()
-        user_fav.user_id = user_id
-        user_fav.good_id = good_id
-        user_fav.save()
+        if user_id:
+            # 下一步判断用户是否已经添加过
+            is_in_good = UserFavorite.objects.filter(user__user_sno=user_sno)
+            # 该用户收藏为0的话
+            user_fav = UserFavorite()
+            user_fav.user_id = user_id
+            user_fav.good_id = good_id
+            user_fav.save()
         return redirect('/')
 
 

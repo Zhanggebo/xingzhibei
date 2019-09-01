@@ -19,14 +19,14 @@ $(function(){
 		$li.appendTo($('.points'));
 	});
 	$points = $('.points li');
-	timer = setInterval(autoplay,4000);
+	timer = setInterval(autoplay,2000);
 
 	$(".slide").mouseenter(function() {
 		clearInterval(timer);
 	});
 
 	$('.slide').mouseleave(function() {
-		timer = setInterval(autoplay,4000);
+		timer = setInterval(autoplay,2000);
 	});
 
 	function autoplay(){
@@ -130,8 +130,8 @@ $(function(){
 });
 
 
-jQuery(document).ready(function ($) {
-	$('#keyboard').mouseover(function () {
-        showMessage('输入你想搜索的关键词再按Enter(回车)键就可以搜索啦!');
-    });
-}
+// jQuery(document).ready(function ($) {
+// 	$('#keyboard').mouseover(function () {
+//         showMessage('输入你想搜索的关键词再按Enter(回车)键就可以搜索啦!');
+//     })
+// }
