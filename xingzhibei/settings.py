@@ -1,3 +1,5 @@
+# 测试
+
 """
 Django settings for xingzhibei project.
 
