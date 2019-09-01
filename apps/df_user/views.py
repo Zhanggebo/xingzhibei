@@ -174,9 +174,10 @@ class Cart(View):
         user_sno = request.session.get('user_sno')
         user_fav = UserFavorite.objects.filter(user__user_sno=user_sno)
 
-        # del_good_id = request.GET.get('del_good_id')
-        # user = UserFavorite.objects.filter(user__user_sno=user_sno)
-        # print(user[0].good.id)
+        # 删除收藏的商品
+        del_good_id = request.GET.get('del_good_id')
+        user = UserFavorite.objects.filter(good_id=del_good_id)
+        user.delete()
 
         return render(request, 'df_user/cart.html', {
             'user_fav': user_fav
