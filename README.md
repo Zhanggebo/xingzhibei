@@ -1,3 +1,14 @@
+<h1 align="center">Welcome to 星之贝-C2C二手交易平台</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/version-v1.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/language-python3-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/platform-macos-blue.svg?cacheSeconds=2592000" />
+  <a href="http://www.gnu.org/licenses/gpl-3.0.html">
+    <img alt="License: GPL" src="https://img.shields.io/badge/License-GPL-yellow.svg" target="_blank" />
+  </a>
+</p>
+
+
 # 星之贝-C2C二手交易平台
 
 #### 介绍
